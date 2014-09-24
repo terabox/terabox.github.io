@@ -3,7 +3,7 @@ lock '3.2.1'
 
 set :application, 'terabox_site'
 set :scm, :git
-set :repo_url, 'https://github.com/cloudvis/cloudvis.github.io.git'
+set :repo_url, 'https://github.com/terabox/terabox.github.io.git'
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }
