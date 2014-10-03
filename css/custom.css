@@ -1,1 +1,12 @@
 /* Add here all your CSS customizations */
+body {
+    color: #424242;
+}
+
+p {
+    color: #424242;
+}
+
+section.toggle > label + p {
+    color: #424242;
+}
