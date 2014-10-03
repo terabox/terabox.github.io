@@ -2,66 +2,8 @@
 layout: default
 ---
 
-<div class="header-container" style="min-height: 79px;">
-    <header class="narrow" data-after-header="">
-        <div class="container">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img alt="Porto" style="height: 72px;width: 148px;" src="/img/logo.png">
-                </a>
-            </h1>
-            <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-                <i class="icon icon-bars"></i>
-            </button>
-        </div>
-        <div class="navbar-collapse nav-main-collapse collapse">
-            <div class="container">
-                <div class="social-icons">
-                    <ul class="social-icons">
-                        <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a>
-                        </li>
-                        <li class="twitter"><a href="http://www.twitter.com/" target="_blank"
-                                               title="Twitter">Twitter</a></li>
-                        <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav class="nav-main mega-menu">
-                    <ul class="nav nav-pills nav-main" id="mainMenu">
-                        <li>
-                            <a href="/">
-                                Trang Chủ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tinhnang">
-                                Tính Năng
-                            </a>
-                        </li>
+{% include menu.html %}
 
-                        <li>
-                            <a href="/pricing">
-                                Bảng Giá
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Hỗ Trợ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Liên Hệ
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-</div>
 <div role="main" class="main">
 <section class="page-top">
     <div class="container">
@@ -96,14 +38,13 @@ layout: default
         <div class="col-md-3">
             <div class="featured-box featured-box-primary" style="height: 377px;">
                 <div class="box-content">
-                    <i class="icon-featured image-icon user big"></i>
+                    <i class="icon-featured fa fa-history"></i>
                     <h4>Sử Dụng Thử</h4>
 
-                    <p>Trải nghiệm đầy đủ tính năng trong 30 ngày cùng 50GB.
+                    <p>Trải nghiệm đầy đủ tính năng trong 30 ngày + 50GB dữ liệu.
                         <br/>
-                        <a class="btn btn-primary btn-xs" href="#">Đăng Ký Ngay <i
+                        <a target="_blank" class="btn btn-primary btn-xs" href="http://my.terabox.vn">Đăng Ký Ngay <i
                                 class="icon icon-angle-right"></i></a>
-                        <a href="/" class="learn-more">so sánh tính năng <i class="icon icon-angle-right"></i></a>
                     </p>
                 </div>
             </div>
@@ -111,13 +52,12 @@ layout: default
         <div class="col-md-3">
             <div class="featured-box featured-box-secundary" style="height: 377px;">
                 <div class="box-content">
-                    <i class="icon-featured icon icon-book"></i>
+                    <i class="icon-featured fa fa-ticket"></i>
                     <h4>Miễn Phí</h4>
 
-                    <p>Sao lưu file với 2GB miễn phí. <br/>
+                    <p>Sao lưu 2GB miễn phí không giới hạn thời gian sử dụng. <br/>
                         <a class="btn btn-primary btn-xs" href="#">Đăng Ký Ngay <i
                                 class="icon icon-angle-right"></i></a>
-                        <a href="/" class="learn-more">so sánh tính năng <i class="icon icon-angle-right"></i></a>
                     </p>
                 </div>
             </div>
@@ -125,25 +65,24 @@ layout: default
         <div class="col-md-3">
             <div class="featured-box featured-box-tertiary" style="height: 377px;">
                 <div class="box-content">
-                    <i class="icon-featured icon icon-trophy"></i>
+                    <i class="icon-featured fa fa-user"></i>
                     <h4>Cá Nhân</h4>
 
-                    <p>Lưu trữ không giới hạn file, hình ảnh, mailbox.
+                    <p>Lưu trữ file, hình ảnh, mailbox với dung lượng lớn.
                         <br/>
                         <a class="btn btn-primary btn-xs" href="#pricing">Chi tiết giá <i
                                 class="icon icon-angle-right"></i></a>
-                        <a href="/" class="learn-more">so sánh tính năng <i class="icon icon-angle-right"></i></a>
                     </p>
                 </div>
             </div>
         </div>
         <div class="col-md-3">
-            <div class="featured-box featured-box-quaternary" style="height: 377px;">
+            <div class="featured-box featured-box-quartenary" style="height: 377px;">
                 <div class="box-content">
-                    <i class="icon-featured icon icon-cogs"></i>
+                    <i class="icon-featured fa fa-building-o"></i>
                     <h4>Doanh Nghiệp</h4>
 
-                    <p>Phòng ngừa triệt để rủi ro về an ninh dữ liệu, an toàn kĩ thuật.
+                    <p>Phòng ngừa triệt để rủi ro về dữ liệu, an toàn kĩ thuật.
                         <br/>
                         <a class="btn btn-primary btn-xs" href="#pricing">Chi tiết giá <i
                                 class="icon icon-angle-right"></i></a>
@@ -152,11 +91,12 @@ layout: default
             </div>
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-12 col-lg-12" style="text-align: center;">
-            <a href="/" class="btn btn-lg btn-success">SO SÁNH TÍNH NĂNG <i class="icon icon-angle-right"></i></a>
-        </div>
-    </div>
+
+    <!--<div class="row">-->
+        <!--<div class="col-md-12 col-lg-12" style="text-align: center;">-->
+            <!--<a href="/" class="btn btn-lg btn-success">SO SÁNH TÍNH NĂNG <i class="icon icon-angle-right"></i></a>-->
+        <!--</div>-->
+    <!--</div>-->
     <div class="row">
         <div class="col-md-12 col-lg-12">
             <h2><strong>So Sánh</strong> Tính Năng</h2>
@@ -167,6 +107,9 @@ layout: default
                         <ul>
                             <li><b>Phần mềm</b></li>
                             <li><b>Backup Set</b></li>
+                            <li><b>Tài khoản</b></li>
+                            <li>Pro</li>
+                            <li>Lite</li>
                             <li><b>Dung lượng</b> </li>
                             <li><b>Hệ điều hành</b> </li>
                             <li>Windows </li>
@@ -185,6 +128,7 @@ layout: default
                             <li><b>Cơ chế sao lưu</b></li>
                             <li>Theo lịch</li>
                             <li>Thời gian thực</li>
+                            <li><b>Hỗ trợ 24/7/365</b></li>
                         </ul>
                     </div>
                 </div>
@@ -194,23 +138,27 @@ layout: default
                         <ul>
                             <li>TeraBackup Lite/Pro</li>
                             <li>Không giới hạn</li>
+                            <li>&nbsp;</li>
+                            <li>10</li>
+                            <li>10</li>
                             <li>50 GB</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                             <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                         </ul>
                     </div>
@@ -221,7 +169,16 @@ layout: default
                         <ul>
                             <li>TeraBackup Lite</li>
                             <li>1</li>
+                            <li>&nbsp;</li>
+                            <li>-</li>
+                            <li>1</li>
                             <li>2 GB</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                             <li>-</li>
                             <li>-</li>
@@ -230,14 +187,9 @@ layout: default
                             <li>-</li>
                             <li>-</li>
                             <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                         </ul>
                     </div>
@@ -248,7 +200,16 @@ layout: default
                         <ul>
                             <li>TeraBackup Lite</li>
                             <li>1</li>
+                            <li>&nbsp;</li>
+                            <li>-</li>
+                            <li>1</li>
                             <li>Theo gói</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                             <li>-</li>
                             <li>-</li>
@@ -257,14 +218,9 @@ layout: default
                             <li>-</li>
                             <li>-</li>
                             <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
                             <li>-</li>
                         </ul>
                     </div>
@@ -275,30 +231,44 @@ layout: default
                         <ul>
                             <li>TeraBackup Lite/Pro</li>
                             <li>Không giới hạn</li>
+                            <li>&nbsp;</li>
+                            <li>Không giới hạn (*)</li>
+                            <li>Không giới hạn (**)</li>
                             <li>Theo gói</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
-                            <li>-</li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li>&nbsp;</li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li>&nbsp;</i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
+                            <li><i class="fa fa-check"></i></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="row">
+        <div class="col-md-12 col-lg-12">
+            <p>
+                (*) - Miễn phí 01 tài khoản Pro. Mỗi tài khoản tiếp theo giá 200.000/tài khoản/tháng </p>
+            <p>
+                (**) - Mỗi tài khoản Lite giá 100.000/tài khoản/tháng
+            </p>
+        </div>
+    </div>
+
 </div>
 
 <div class="container" id="pricing">
@@ -316,53 +286,62 @@ layout: default
                     <div class="pricing-table">
                         <div class="col-md-3">
                             <div class="plan">
-                                <h3>50 GB<span>500.000</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>10GB</b> Disk Space</li>
-                                    <li><b>100GB</b> Monthly Bandwidth</li>
-                                    <li><b>20</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>50 GB</h3>
+                                <h4>220.000/tháng</h4>
+                                <hr/>
+                                <a target="_blank" class="btn btn-lg btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
+                                <!--<ul>-->
+                                    <!--<li><b>10GB</b> Disk Space</li>-->
+                                    <!--<li><b>100GB</b> Monthly Bandwidth</li>-->
+                                    <!--<li><b>20</b> Email Accounts</li>-->
+                                    <!--<li><b>Unlimited</b> subdomains</li>-->
+                                <!--</ul>-->
                             </div>
                         </div>
                         <div class="col-md-3 center">
-                            <div class="plan">
-                                <h3>100 GB<span>$29</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>5GB</b> Disk Space</li>
-                                    <li><b>50GB</b> Monthly Bandwidth</li>
-                                    <li><b>10</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-3">
                             <div class="plan  most-popular">
                                 <div class="plan-ribbon-wrapper">
-                                    <div class="plan-ribbon">Gói Chuẩn</div>
+                                    <div class="plan-ribbon">Phổ Biến</div>
                                 </div>
-                                <h3>200 GB<span>$17</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>3GB</b> Disk Space</li>
-                                    <li><b>25GB</b> Monthly Bandwidth</li>
-                                    <li><b>5</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>100 GB</h3>
+                                <h4>340.000/tháng</h4>
+                                <hr/>
+                                <a target="_blank" class="btn btn-lg btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
+                                <!--<ul>-->
+                                    <!--<li><b>5GB</b> Disk Space</li>-->
+                                    <!--<li><b>50GB</b> Monthly Bandwidth</li>-->
+                                    <!--<li><b>10</b> Email Accounts</li>-->
+                                    <!--<li><b>Unlimited</b> subdomains</li>-->
+                                <!--</ul>-->
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="plan ">
+
+                                <h3>100 GB</h3>
+                                <h4 style="">340.000/tháng</h4>
+                                <hr/>
+                                <a target="_blank" class="btn btn-lg btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
+                                <!--<ul>-->
+                                    <!--<li><b>3GB</b> Disk Space</li>-->
+                                    <!--<li><b>25GB</b> Monthly Bandwidth</li>-->
+                                    <!--<li><b>5</b> Email Accounts</li>-->
+                                    <!--<li><b>Unlimited</b> subdomains</li>-->
+                                <!--</ul>-->
                             </div>
                         </div>
                         <div class="col-md-3">
                             <div class="plan">
-                                <h3>500 GB<span>$9</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>1GB</b> Disk Space</li>
-                                    <li><b>10GB</b> Monthly Bandwidth</li>
-                                    <li><b>2</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>200 GB</h3>
+                                <h4 style="">580.000/tháng</h4>
+                                <hr/>
+                                <a target="_blank" class="btn btn-lg btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
+                                <!--<ul>-->
+                                    <!--<li><b>1GB</b> Disk Space</li>-->
+                                    <!--<li><b>10GB</b> Monthly Bandwidth</li>-->
+                                    <!--<li><b>2</b> Email Accounts</li>-->
+                                    <!--<li><b>Unlimited</b> subdomains</li>-->
+                                <!--</ul>-->
                             </div>
                         </div>
 
@@ -374,77 +353,53 @@ layout: default
                     <div class="pricing-table">
                         <div class="col-md-2">
                             <div class="plan">
-                                <h3>50 GB<span>500.000</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>10GB</b> Disk Space</li>
-                                    <li><b>100GB</b> Monthly Bandwidth</li>
-                                    <li><b>20</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-md-2 center">
-                            <div class="plan">
-                                <h3>100 GB<span>$29</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>5GB</b> Disk Space</li>
-                                    <li><b>50GB</b> Monthly Bandwidth</li>
-                                    <li><b>10</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>50 GB</h3>
+                                <h5>500.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
                             </div>
                         </div>
                         <div class="col-md-2">
-                            <div class="plan  most-popular">
+                            <div class="plan">
+                                <h3>100 GB</h3>
+                                <h5 style="">800.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <div class="plan most-popular">
                                 <div class="plan-ribbon-wrapper">
-                                    <div class="plan-ribbon">Gói Chuẩn</div>
+                                    <div class="plan-ribbon">Phổ Biến</div>
                                 </div>
-                                <h3>200 GB<span>$17</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>3GB</b> Disk Space</li>
-                                    <li><b>25GB</b> Monthly Bandwidth</li>
-                                    <li><b>5</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>200 GB</h3>
+                                <h5 style="">1.400.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="plan">
-                                <h3>500 GB<span>$9</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>1GB</b> Disk Space</li>
-                                    <li><b>10GB</b> Monthly Bandwidth</li>
-                                    <li><b>2</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>500 GB</h3>
+                                <h5 style="">3.200.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="plan">
-                                <h3>1000 GB<span>$9</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>1GB</b> Disk Space</li>
-                                    <li><b>10GB</b> Monthly Bandwidth</li>
-                                    <li><b>2</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>1000 GB</h3>
+                                <h5 style="">6.200.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
                             </div>
                         </div>
                         <div class="col-md-2">
                             <div class="plan">
-                                <h3>2000 GB<span>$9</span></h3>
-                                <a class="btn btn-lg btn-primary" href="#">Sign up</a>
-                                <ul>
-                                    <li><b>1GB</b> Disk Space</li>
-                                    <li><b>10GB</b> Monthly Bandwidth</li>
-                                    <li><b>2</b> Email Accounts</li>
-                                    <li><b>Unlimited</b> subdomains</li>
-                                </ul>
+                                <h3>2000 GB</h3>
+                                <h5 style="">12.200.000/tháng</h5>
+                                <hr/>
+                                <a target="_blank" class="btn btn-primary" href="http://my.terabox.vn">Đăng Ký Ngay</a>
                             </div>
                         </div>
                     </div>

@@ -2,209 +2,278 @@
 layout: default
 ---
 
-<div class="header-container" style="min-height: 79px;">
-    <header class="narrow" data-after-header="">
-        <div class="container">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img alt="Porto" style="height: 72px;width: 148px;" src="/img/logo.png">
-                </a>
-            </h1>
-            <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-                <i class="icon icon-bars"></i>
-            </button>
-        </div>
-        <div class="navbar-collapse nav-main-collapse collapse">
-            <div class="container">
-                <div class="social-icons">
-                    <ul class="social-icons">
-                        <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a>
-                        </li>
-                        <li class="twitter"><a href="http://www.twitter.com/" target="_blank"
-                                               title="Twitter">Twitter</a></li>
-                        <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav class="nav-main mega-menu">
-                    <ul class="nav nav-pills nav-main" id="mainMenu">
-                        <li>
-                            <a href="/">
-                                Trang Chủ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/tinhnang">
-                                Tính Năng
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/pricing">
-                                Bảng Giá
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Hỗ Trợ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Liên Hệ
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-</div>
+{% include menu.html %}
 
 <div role="main" class="main">
-    <section class="page-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="breadcrumb">
-                        <li><a href="index.html">Trang Chủ</a></li>
-                        <li class="active">Tính Năng Nổi Bật</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h2>Tính Năng Nổi Bật</h2>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="page-top hidden-lg hidden-md">
     <div class="container">
         <div class="row">
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-group"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Dung lượng không giới hạn</h4>
-
-                        <p class="tall">Hàng gigabyte hay terabyte luôn sẵn có phù hợp với nhu cầu của doanh nghiệp
-                            bạn.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-film"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Giữ lại tất cả phiên bản của dữ liệu</h4>
-
-                        <p class="tall">Từ email, hình ảnh, các tập tin video, đồ họa, tài liệu văn bản,v…v. Cập nhật
-                            mọi phiên bản sửa chữa tập tin của bạn từ lúc khởi tạo tới khi kết thúc.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-bars"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Nén dữ liệu</h4>
-
-                        <p class="tall">Trước khi gửi đi, TeraBox sẽ nén dữ liệu thành những kích thước nhỏ hơn. Ví dụ:
-                            dữ liệu text là 2:1, database là 4:1, email là 2:1.</p>
-                    </div>
-                </div>
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="/">Trang Chủ</a></li>
+                    <li class="active">Tính Năng Nổi Bật</li>
+                </ul>
             </div>
         </div>
         <div class="row">
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-group"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Bảo vệ dữ liệu liên tục
-                        </h4>
-
-                        <p class="tall">Công nghệ Sao lưu thời gian thực liên tục theo dõi trạng thái tập tin mỗi khi có sự thay đổi để bạn có thể phục hồi dữ liệu ngay tại thời điểm trước khi sự cố xảy ra.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-film"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Công nghệ so sánh thông minh</h4>
-
-                        <p class="tall">Tính năng so sánh thông minh phát hiện những chi tiết thay đổi giữa các phiên bản và chỉ sao lưu sự thay đổi đó thay vì toàn bộ tập tin, giúp tiết kiệm đáng kể dung lượng lưu trữ.
-                         </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-bars"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Bảo mật tối đa</h4>
-
-                        <p class="tall">Dữ liệu được mã hóa trước khi ra khỏi máy.  Khóa mã hóa do chính bạn thiết lập và hoàn toàn bí mật ngay cả với nhà cung cấp dịch vụ
-                            .</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-group"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Hỗ trợ chuyên nghiệp
-
-                        </h4>
-
-                        <p class="tall">Doanh nghiệp luôn được hỗ trợ tại chỗ kịp thời khi dung lượng dữ liệu quá lớn và tất cả các sự cố kĩ thuật liên quan.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-film"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Sao lưu tự động</h4>
-
-                        <p class="tall">Tùy theo ý thích mà bạn có thể cài đặt chế độ sao lưu tự động hoặc chọn những
-                            thư mục cụ thể để sao lưu theo lịch. </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box secundary">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-bars"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Tiết kiệm chi phí</h4>
-
-                        <p class="tall">Không phải tốn thêm chi phí đầu tư máy móc, vận hành, nhận lực với độ rủi ro
-                            cao. Bạn chỉ phải trả theo những gì bạn đã sử dụng.</p>
-                    </div>
-                </div>
+            <div class="col-md-12">
+                <h2>Tính Năng Nổi Bật</h2>
             </div>
         </div>
     </div>
+</section>
+<section class="page-top custom-product hidden-xs hidden-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9">
+                <img class="img-responsive" src="/img/feature.png">
+            </div>
+
+        </div>
+    </div>
+</section>
+<div class="container">
+<p>
+    Dịch vụ sao lưu dữ liệu trực tuyến TeraBackup là giải pháp hợp lí nhất mà bạn có thể nghĩ tới cho doanh nghiệp của
+    mình. Hỗ trợ mọi môi trường từ Laptop, Desktop đến Server, TeraBackup đảm bảo an toàn về dữ liệu để bạn an tâm vận
+    hành công việc một cách trơn tru. Cơ chế bảo mật đáp ứng tiêu chuẩn quốc tế nghiêm ngặt nhất, cam kết uy tín tuyệt
+    đối với khách hàng (Xem thêm phần bảo mật).
+</p>
+<hr/>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Không chỉ bảo vệ dữ liệu thông thường</h4>
+
+        <p>
+            Mà TeraBackup còn có khả năng sao lưu cả những ứng dụng của bạn bao gồm Database, Mail Server, Mail
+            cá nhân và Các máy ảo mà các ứng dụng sao lưu thông thường không thực hiện được để đáp ứng trọn vẹn
+            nhu cầu của các cá nhân và doanh nghiệp.
+        </p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Bảo mật tuyệt đối</h4>
+
+        <p>Tất cả dữ liệu của bạn được TeraBackup mã hóa trước khi ra khỏi máy và bảo mật ngay cả với nhà cung
+            cấp. Việc thiết lập khóa mã hóa do chính bạn thiết lập và chỉ bạn có thể giải mã được dữ liệu của
+            mình. <a href="#">Xem thêm phần bảo mật</a></p>
+    </div>
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Bảo vệ dữ liệu liên tục</h4>
+
+        <p>Công nghệ Sao lưu thời gian thực liên tục theo dõi trạng thái tập tin mỗi khi có sự thay đổi giúp bạn giảm
+            thiểu rủi ro mất dữ liệu khi sự cố xảy ra.</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Dung lượng lưu trữ lớn</h4>
+
+        <p>Có thể mở rộng đến hàng terabyte, đáp ứng nhu cầu về lưu trữ của doanh nghiệp.</p>
+    </div>
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Khả năng nén dữ liệu</h4>
+
+        <p>Dữ liệu sẽ được nén trước khi truyền đi, giúp tiết kiệm thời gian, băng thông, dung lượng và chi phí cho
+            bạn.</p>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Phát hiện và sao lưu duy nhất sự thay đổi</h4>
+
+        <p>Tính năng so sánh thông minh phát hiện những chi tiết thay đổi giữa các phiên bản và chỉ sao lưu sự thay đổi
+            đó thay vì toàn bộ tập tin, giúp tiết kiệm đáng kể dung lượng lưu trữ.</p>
+    </div>
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Phục hồi theo phiên bản</h4>
+
+        <p>TeraBackup giữ lại các phiên bản thay đổi của dữ liệu từ email, hình ảnh, các tập tin video, đồ họa, tài liệu
+            văn bản,v…v theo các phiên bản mà bạn đã sao lưu.</p>
+    </div>
+
+</div>
+<div class="row">
+
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Hỗ trợ nhiều hệ điều hành</h4>
+
+        <p>eraBackup hỗ trợ hầu hết các hệ điêu hành hiện nay, bao gồm: Windows 7/8, Windows Server 2008/2012, Linux & MacOS.</p>
+    </div>
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-md-6 col-lg-6">
+
+    </div>
+    <div class="col-md-6 col-lg-6">
+        <h4 class="shorter">Hỗ trợ chuyên nghiệp</h4>
+
+        <p>Với đội ngũ nhân viên hỗ trợ 24/7, khách hàng luôn được hỗ trợ nhiệt tình và kịp thời khi có bất kì vấn đề về
+            kĩ thuật hoặc thắc mắc về dịch vụ.</p>
+    </div>
+
+</div>
+<!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-group"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Dung lượng không giới hạn</h4>-->
+
+                <!--<p class="tall">Hàng gigabyte hay terabyte luôn sẵn có phù hợp với nhu cầu của doanh nghiệp-->
+                    <!--bạn.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-film"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Giữ lại tất cả phiên bản của dữ liệu</h4>-->
+
+                <!--<p class="tall">Từ email, hình ảnh, các tập tin video, đồ họa, tài liệu văn bản,v…v. Cập nhật-->
+                    <!--mọi phiên bản sửa chữa tập tin của bạn từ lúc khởi tạo tới khi kết thúc.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-bars"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Nén dữ liệu</h4>-->
+
+                <!--<p class="tall">Trước khi gửi đi, TeraBox sẽ nén dữ liệu thành những kích thước nhỏ hơn. Ví dụ:-->
+                    <!--dữ liệu text là 2:1, database là 4:1, email là 2:1.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-group"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Bảo vệ dữ liệu liên tục-->
+                <!--</h4>-->
+
+                <!--<p class="tall">Công nghệ Sao lưu thời gian thực liên tục theo dõi trạng thái tập tin mỗi khi có-->
+                    <!--sự thay đổi để bạn có thể phục hồi dữ liệu ngay tại thời điểm trước khi sự cố xảy ra.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-film"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Công nghệ so sánh thông minh</h4>-->
+
+                <!--<p class="tall">Tính năng so sánh thông minh phát hiện những chi tiết thay đổi giữa các phiên-->
+                    <!--bản và chỉ sao lưu sự thay đổi đó thay vì toàn bộ tập tin, giúp tiết kiệm đáng kể dung lượng-->
+                    <!--lưu trữ.-->
+                <!--</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-bars"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Bảo mật tối đa</h4>-->
+
+                <!--<p class="tall">Dữ liệu được mã hóa trước khi ra khỏi máy. Khóa mã hóa do chính bạn thiết lập và-->
+                    <!--hoàn toàn bí mật ngay cả với nhà cung cấp dịch vụ-->
+                    <!--.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-group"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Hỗ trợ chuyên nghiệp-->
+
+                <!--</h4>-->
+
+                <!--<p class="tall">Doanh nghiệp luôn được hỗ trợ tại chỗ kịp thời khi dung lượng dữ liệu quá lớn và-->
+                    <!--tất cả các sự cố kĩ thuật liên quan.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-film"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Sao lưu tự động</h4>-->
+
+                <!--<p class="tall">Tùy theo ý thích mà bạn có thể cài đặt chế độ sao lưu tự động hoặc chọn những-->
+                    <!--thư mục cụ thể để sao lưu theo lịch. </p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+        <!--<div class="feature-box secundary">-->
+            <!--<div class="feature-box-icon">-->
+                <!--<i class="icon icon-bars"></i>-->
+            <!--</div>-->
+            <!--<div class="feature-box-info">-->
+                <!--<h4 class="shorter">Tiết kiệm chi phí</h4>-->
+
+                <!--<p class="tall">Không phải tốn thêm chi phí đầu tư máy móc, vận hành, nhận lực với độ rủi ro-->
+                    <!--cao. Bạn chỉ phải trả theo những gì bạn đã sử dụng.</p>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+</div>
 </div>

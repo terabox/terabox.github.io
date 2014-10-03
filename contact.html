@@ -1,0 +1,86 @@
+---
+layout: default
+---
+
+{% include menu.html %}
+
+<div role="main" class="main">
+    <section class="page-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li class="active">Liên hệ</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Liên hệ</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="offset-anchor" id="contact-sent"></div>
+
+
+                <h2 class="short"><strong>Liên hệ</strong> TeraBackup</h2>
+                <form id="contactForm" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data" data-type="advanced" novalidate="novalidate">
+                    <input type="hidden" value="true" name="emailSent" id="emailSent">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Họ và tên *</label>
+                                <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email *</label>
+                                <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Nội dung *</label>
+                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <input type="submit" id="contactFormSubmit" value="Gửi liên hệ" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6">
+
+                <p>Vui lòng điền đầy đủ nội dung thông tin liên hệ. Chúng tôi sẽ phản hồi cho bạn trong thời gian sớm nhất.</p>
+
+                <hr>
+
+                <h4><strong>Trụ Sở Chính</strong></h4>
+                <ul class="list-unstyled">
+                    <li><i class="icon icon-map-marker"></i> <strong>Địa Chỉ:</strong> 27, Hoa Đào, Phường 2, Phú Nhuận, TPHCM</li>
+                    <li><i class="icon icon-phone"></i> <strong>Phone:</strong> 1800.xxxx</li>
+                    <li><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:contact@terabox.vn">contact@terabox.vn</a></li>
+                </ul>
+
+                <hr>
+
+                <h4> <strong>Giờ Hành Chính</strong> </h4>
+                <ul class="list-unstyled">
+                    <li><i class="icon icon-time"></i> Thứ 2 - thứ 6 9AM - 6PM</li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</div>

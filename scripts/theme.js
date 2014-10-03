@@ -1,1049 +1,2442 @@
 /*
-Name: 			Core Initializer
-Written by: 	Okler Themes - (http://www.okler.net)
-Version: 		2.9.0 - Wed Mar 19 2014 16:59:18
-*/
+ Name: 			Theme Base
+ Written by: 	Okler Themes - (http://www.okler.net)
+ Theme Version:	3.3.1
+ */
 
-(function() {
+// Theme
+window.theme = {};
 
-	"use strict";
+// Animate
+(function(theme, $) {
 
-	var Core = {
+    theme = theme || {};
 
-		initialized: false,
+    var instanceName = '__animate';
 
-		initialize: function() {
+    var PluginAnimate = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-			if (this.initialized) return;
-			this.initialized = true;
+    PluginAnimate.defaults = {
+        accX: 0,
+        accY: -150,
+        delay: 1
+    };
 
-			this.build();
-			this.events();
+    PluginAnimate.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-		},
+            this.$el = $el;
 
-		build: function() {
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-			// Adds browser version on html class.
-			$.browserSelector();
+            return this;
+        },
 
-			// Adds window smooth scroll on chrome.
-			if($("html").hasClass("chrome")) {
-				$.smoothScroll();
-			}
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-			// Scroll to Top Button.
-			$.scrollToTop();
+            return this;
+        },
 
-			// Nav Menu
-			this.navMenu();
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginAnimate.defaults, opts, {
+                wrapper: this.$el
+            });
 
-			// Header Search
-			this.headerSearch();
+            return this;
+        },
 
-			// Animations
-			this.animations();
+        build: function() {
+            var self = this,
+                $el = this.options.wrapper,
+                delay = 0;
 
-			// Word Rotate
-			this.wordRotate();
+            $el.addClass('appear-animation');
 
-			// Newsletter
-			this.newsletter();
+            if (!$('html').hasClass('no-csstransitions') && $(window).width() > 767) {
 
-			// Featured Boxes
-			this.featuredBoxes();
+                $el.appear(function() {
 
-			// Tooltips
-			$("a[rel=tooltip]").tooltip();
+                    delay = ($el.attr('data-appear-animation-delay') ? $el.attr('data-appear-animation-delay') : self.options.delay);
 
-			// Owl Carousel
-			this.owlCarousel();
+                    if (delay > 1) {
+                        $el.css('animation-delay', delay + 'ms');
+                    }
 
-			// Sort
-			this.sort();
+                    $el.addClass($el.attr('data-appear-animation'));
 
-			// Toggle
-			this.toggle();
+                    setTimeout(function() {
+                        $el.addClass('appear-animation-visible');
+                    }, delay);
 
-			// Twitter
-			this.latestTweets();
+                }, {
+                    accX: self.options.accX,
+                    accY: self.options.accY
+                });
 
-			// Flickr Feed
-			this.flickrFeed();
+            } else {
 
-			// Lightbox
-			this.lightbox();
+                $el.addClass('appear-animation-visible');
 
-			// Media Element
-			this.mediaElement();
+            }
 
-			// Parallax
-			this.parallax();
+            return this;
+        }
+    };
 
-			// Account
-			this.account();
+    // expose to scope
+    $.extend(theme, {
+        PluginAnimate: PluginAnimate
+    });
 
-		},
+    // jquery plugin
+    $.fn.themePluginAnimate = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginAnimate($this, opts);
+            }
+
+        });
+    };
 
-		events: function() {
+}).apply(this, [window.theme, jQuery]);
 
-			// Window Resize
-			$(window).afterResize(function() {
+// Carousel
+(function(theme, $) {
 
-				// Featured Boxes
-				Core.featuredBoxes();
+    theme = theme || {};
 
-				// Sticky Menu
-				Core.checkStickyMenu();
+    var instanceName = '__carousel';
 
-				// Revolution Slider Fix
-				Core.fixRevolutionSlider();
+    var PluginCarousel = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginCarousel.defaults = {
+        itemsDesktop: [1199, 4],
+        itemsDesktopSmall: [979, 3],
+        itemsTablet: [768, 2],
+        itemsTabletSmall: false,
+        itemsMobile: [479, 1]
+    };
+
+    PluginCarousel.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginCarousel.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            if (!($.isFunction($.fn.owlCarousel))) {
+                return this;
+            }
+
+            // Force to Show 1 item if Items Settings is set to 1
+            if (this.options.items === 1) {
+                this.options = $.extend(true, {}, this.options, {
+                    itemsDesktop: false,
+                    itemsDesktopSmall: false,
+                    itemsTablet: false,
+                    itemsTabletSmall: false,
+                    itemsMobile: false
+                });
+            }
+
+            this.options.wrapper.owlCarousel(this.options).addClass("owl-carousel-init");
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginCarousel: PluginCarousel
+    });
+
+    // jquery plugin
+    $.fn.themePluginCarousel = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginCarousel($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Chart Circular
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__chartCircular';
+
+    var PluginChartCircular = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginChartCircular.defaults = {
+        accX: 0,
+        accY: -150,
+        delay: 1,
+        barColor: '#0088CC',
+        trackColor: '#f2f2f2',
+        scaleColor: false,
+        scaleLength: 5,
+        lineCap: 'round',
+        lineWidth: 13,
+        size: 175,
+        rotate: 0,
+        animate: ({
+            duration: 2500,
+            enabled: true
+        })
+    };
+
+    PluginChartCircular.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginChartCircular.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            if (!($.isFunction($.fn.appear)) || !($.isFunction($.fn.easyPieChart))) {
+                return this;
+            }
+
+            var self = this,
+                $el = this.options.wrapper,
+                value = ($el.attr('data-percent') ? $el.attr('data-percent') : 0),
+                percentEl = $el.find('.percent');
+
+            $.extend(true, self.options, {
+                onStep: function(from, to, currentValue) {
+                    percentEl.html(parseInt(currentValue));
+                }
+            });
+
+            $el.attr('data-percent', 0);
+
+            $el.appear(function() {
+
+                $el.easyPieChart(self.options);
+
+                setTimeout(function() {
+
+                    $el.data('easyPieChart').update(value);
+                    $el.attr('data-percent', value);
+
+                }, self.options.delay);
+
+            }, {
+                accX: self.options.accX,
+                accY: self.options.accY
+            });
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginChartCircular: PluginChartCircular
+    });
+
+    // jquery plugin
+    $.fn.themePluginChartCircular = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginChartCircular($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Counter
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__counter';
+
+    var PluginCounter = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginCounter.defaults = {
+        accX: 0,
+        accY: 0,
+        speed: 3000,
+        refreshInterval: 100,
+        decimals: 0,
+        onUpdate: null,
+        onComplete: null
+    };
+
+    PluginCounter.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginCounter.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            if (!($.isFunction($.fn.countTo))) {
+                return this;
+            }
+
+            var self = this,
+                $el = this.options.wrapper;
+
+            $.extend(self.options, {
+                onComplete: function() {
+                    if ($el.data('append')) {
+                        $el.html($el.html() + $el.data('append'));
+                    }
+                }
+            });
+
+            $el.appear(function() {
+
+                $el.countTo(self.options);
+
+            }, {
+                accX: self.options.accX,
+                accY: self.options.accY
+            });
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginCounter: PluginCounter
+    });
+
+    // jquery plugin
+    $.fn.themePluginCounter = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginCounter($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Flickr
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__flickr';
+
+    var PluginFlickr = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginFlickr.defaults = {
+        flickrbase: 'http://api.flickr.com/services/feeds/',
+        feedapi: 'photos_public.gne',
+        limit: 6,
+        qstrings: {
+            lang: 'en-us',
+            format: 'json',
+            jsoncallback: '?'
+        },
+        cleanDescription: true,
+        useTemplate: true,
+        itemTemplate: '<li><a href="{{image_b}}" title="{{title}}"><span class="thumbnail"><img src="{{image_s}}" /></span></a></li>',
+        itemCallback: function() {}
+    };
+
+    PluginFlickr.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginFlickr.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            if (!($.isFunction($.fn.jflickrfeed)) || !($.isFunction($.fn.magnificPopup))) {
+                return this;
+            }
+
+            var self = this;
+
+            self.options.wrapper.jflickrfeed(this.options, function(data) {
+
+                self.options.wrapper.magnificPopup({
+                    delegate: 'a',
+                    type: 'image',
+                    gallery: {
+                        enabled: true,
+                        navigateByImgClick: true,
+                        preload: [0, 1]
+                    },
+                    zoom: {
+                        enabled: true,
+                        duration: 300,
+                        opener: function(element) {
+                            return element.find('img');
+                        }
+                    }
+                });
+
+            });
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginFlickr: PluginFlickr
+    });
+
+    // jquery plugin
+    $.fn.themePluginFlickr = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginFlickr($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Lightbox
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__lightbox';
+
+    var PluginLightbox = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginLightbox.defaults = {
+        tClose: 'Close (Esc)', // Alt text on close button
+        tLoading: 'Loading...', // Text that is displayed during loading. Can contain %curr% and %total% keys
+        gallery: {
+            tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
+            tNext: 'Next (Right arrow key)', // Alt text on right arrow
+            tCounter: '%curr% of %total%' // Markup for "1 of 7" counter
+        },
+        image: {
+            tError: '<a href="%url%">The image</a> could not be loaded.' // Error message when image could not be loaded
+        },
+        ajax: {
+            tError: '<a href="%url%">The content</a> could not be loaded.' // Error message when ajax request failed
+        }
+    };
+
+    PluginLightbox.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginLightbox.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            if (!($.isFunction($.fn.magnificPopup))) {
+                return this;
+            }
+
+            this.options.wrapper.magnificPopup(this.options);
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginLightbox: PluginLightbox
+    });
+
+    // jquery plugin
+    $.fn.themePluginLightbox = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginLightbox($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Masonry
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__masonry';
+
+    var PluginMasonry = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginMasonry.defaults = {
+        itemSelector: 'li',
+        layoutMode: 'fitRows'
+    };
+
+    PluginMasonry.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
 
-				// Isotope
-				if($(".isotope").get(0)) {
-					$(".isotope").isotope('reLayout');
-				}
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginMasonry.defaults, opts, {
+                wrapper: this.$el
+            });
 
-				// Product Info Box
-				Core.productInfoBox();
+            return this;
+        },
 
-			});
+        build: function() {
+            if (!($.isFunction($.fn.isotope))) {
+                return this;
+            }
 
-			// Anchors Position
-			$("a[data-hash]").on("click", function(e) {
+            this.options.wrapper.isotope(this.options);
 
-				e.preventDefault();
-				var header = $("body header:first"),
-					headerHeight = header.height(),
-					target = $(this).attr("href"),
-					$this = $(this);
+            return this;
+        }
+    };
 
-				if($(window).width() > 991) {
-					$("html,body").animate({scrollTop: $(target).offset().top - (headerHeight + 50)}, 600, "easeOutQuad");
-				} else {
-					$("html,body").animate({scrollTop: $(target).offset().top - 30}, 600, "easeOutQuad");
-				}
+    // expose to scope
+    $.extend(theme, {
+        PluginMasonry: PluginMasonry
+    });
 
-				return false;
+    // jquery plugin
+    $.fn.themePluginMasonry = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-			});
+            $this.waitForImages(function() {
+                if ($this.data(instanceName)) {
+                    return $this.data(instanceName);
+                } else {
+                    return new PluginMasonry($this, opts);
+                }
+            });
 
-			$("body").waitForImages(function() {
-				Core.productInfoBox();
-			});
+        });
+    }
 
-		},
+}).apply(this, [window.theme, jQuery]);
 
-		navMenu: function() {
+// Parallax
+(function(theme, $) {
 
-			// Responsive Menu Events
-			var addActiveClass = false;
+    theme = theme || {};
 
-			$("#mainMenu li.dropdown > a, #mainMenu li.dropdown-submenu > a").on("click", function(e) {
+    $.extend(theme, {
 
-				if($(window).width() > 979) return;
+        PluginParallax: {
 
-				e.preventDefault();
+            defaults: {
+                itemsSelector: '.parallax',
+                horizontalScrolling: false
+            },
 
-				addActiveClass = $(this).parent().hasClass("resp-active");
+            initialize: function(opts) {
 
-				$("#mainMenu").find(".resp-active").removeClass("resp-active");
+                this
+                    .setOptions(opts)
+                    .build();
 
-				if(!addActiveClass) {
-					$(this).parents("li").addClass("resp-active");
-				}
+                return this;
+            },
 
-				return;
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts);
 
-			});
+                return this;
+            },
 
-			// Submenu Check Visible Space
-			$("#mainMenu li.dropdown-submenu").hover(function() {
+            build: function() {
+                if (!($.isFunction($.fn.stellar)) || typeof(Modernizr.touch) == 'undefined') {
+                    return this;
+                }
 
-				if($(window).width() < 767) return;
+                var self = this;
 
-				var subMenu = $(this).find("ul.dropdown-menu");
+                $(window).load(function() {
 
-				if(!subMenu.get(0)) return;
+                    if (!Modernizr.touch) {
+                        $.stellar(self.options).addClass('parallax-ready');
+                    } else {
+                        $(self.options.itemsSelector).addClass('parallax-disabled');
+                    }
 
-				var screenWidth = $(window).width(),
-					subMenuOffset = subMenu.offset(),
-					subMenuWidth = subMenu.width(),
-					subMenuParentWidth = subMenu.parents("ul.dropdown-menu").width(),
-					subMenuPosRight = subMenu.offset().left + subMenu.width();
+                });
 
-				if(subMenuPosRight > screenWidth) {
-					subMenu.css("margin-left", "-" + (subMenuParentWidth + subMenuWidth + 10) + "px");
-				} else {
-					subMenu.css("margin-left", 0);
-				}
+                return this;
+            }
 
-			});
+        }
 
-			// Mega Menu
-			$(document).on("click", ".mega-menu .dropdown-menu", function(e) {
-				e.stopPropagation()
-			});
+    });
 
-			// Mobile Redirect
-			$(".mobile-redirect").on("click", function() {
-				if($(window).width() < 991) {
-					self.location = $(this).attr("href");
-				}
-			});
+}).apply(this, [window.theme, jQuery]);
 
-		},
+// Progress Bar
+(function(theme, $) {
 
-		stickyMenu: function() {
+    theme = theme || {};
 
-			if($("body").hasClass("boxed"))
-				return false;
+    var instanceName = '__progressBar';
 
-			var $this = this,
-				$body = $("body"),
-				header = $("header:first"),
-				headerContainer = header.parent(),
-				menuAfterHeader = (typeof header.data('after-header') !== 'undefined'),
-				headerHeight = header.height(),
-				flatParentItems = $("header.flat-menu ul.nav-main > li > a"),
-				logoWrapper = header.find(".logo"),
-				logo = header.find(".logo img"),
-				logoWidth = logo.attr("width"),
-				logoHeight = logo.attr("height"),
-				logoPaddingTop = parseInt(logo.attr("data-sticky-padding") ? logo.attr("data-sticky-padding") : "28"),
-				logoSmallWidth = parseInt(logo.attr("data-sticky-width") ? logo.attr("data-sticky-width") : "82"),
-				logoSmallHeight = parseInt(logo.attr("data-sticky-height") ? logo.attr("data-sticky-height") : "40");
+    var PluginProgressBar = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-			if(menuAfterHeader) {
-				headerContainer.css("min-height", header.height());
-			}
+    PluginProgressBar.defaults = {
+        accX: 0,
+        accY: -50,
+        delay: 1
+    };
 
-			$(window).afterResize(function() {
-				headerContainer.css("min-height", header.height());
-			});
+    PluginProgressBar.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-			$this.checkStickyMenu = function() {
+            this.$el = $el;
 
-				if($body.hasClass("boxed") || $(window).width() < 991) {
-					$this.stickyMenuDeactivate();
-					header.removeClass("fixed")
-					return false;
-				}
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-				if(!menuAfterHeader) {
+            return this;
+        },
 
-					if($(window).scrollTop() > ((headerHeight - 15) - logoSmallHeight)) {
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-						$this.stickyMenuActivate();
+            return this;
+        },
 
-					} else {
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginProgressBar.defaults, opts, {
+                wrapper: this.$el
+            });
 
-						$this.stickyMenuDeactivate();
+            return this;
+        },
 
-					}
+        build: function() {
+            if (!($.isFunction($.fn.appear))) {
+                return this;
+            }
 
-				} else {
+            var self = this,
+                $el = this.options.wrapper,
+                delay = 1;
 
-					if($(window).scrollTop() > header.parent().offset().top) {
+            $el.appear(function() {
 
-						header.addClass("fixed");
+                delay = ($el.attr('data-appear-animation-delay') ? $el.attr('data-appear-animation-delay') : self.options.delay);
 
-					} else {
+                $el.addClass($el.attr('data-appear-animation'));
 
-						header.removeClass("fixed");
+                setTimeout(function() {
 
-					}
+                    $el.animate({
+                        width: $el.attr('data-appear-progress-animation')
+                    }, 1500, 'easeOutQuad', function() {
+                        $el.find('.progress-bar-tooltip').animate({
+                            opacity: 1
+                        }, 500, 'easeOutQuad');
+                    });
 
-				}
+                }, delay);
 
-			}
+            }, {
+                accX: self.options.accX,
+                accY: self.options.accY
+            });
 
-			$this.stickyMenuActivate = function() {
+            return this;
+        }
+    };
 
-				if($body.hasClass("sticky-menu-active"))
-					return false;
+    // expose to scope
+    $.extend(theme, {
+        PluginProgressBar: PluginProgressBar
+    });
 
-				logo.stop(true, true);
+    // jquery plugin
+    $.fn.themePluginProgressBar = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-				$body.addClass("sticky-menu-active").css("padding-top", headerHeight);
-				flatParentItems.addClass("sticky-menu-active");
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginProgressBar($this, opts);
+            }
 
-				logoWrapper.addClass("logo-sticky-active");
+        });
+    }
 
-				logo.animate({
-					width: logoSmallWidth,
-					height: logoSmallHeight,
-					top: logoPaddingTop + "px"
-				}, 200, function() {});
+}).apply(this, [window.theme, jQuery]);
 
-			}
+// Revolution Slider
+(function(theme, $) {
 
-			$this.stickyMenuDeactivate = function() {
+    theme = theme || {};
 
-				if($body.hasClass("sticky-menu-active")) {
+    var instanceName = '__revolution';
 
-					$body.removeClass("sticky-menu-active").css("padding-top", 0);
-					flatParentItems.removeClass("sticky-menu-active");
+    var PluginRevolutionSlider = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-					logoWrapper.removeClass("logo-sticky-active");
+    PluginRevolutionSlider.defaults = {
+        dottedOverlay: 'none',
+        delay: 9000,
+        startwidth: 1170,
+        startheight: 500,
+        hideThumbs: 200,
 
-					logo.animate({
-						width: logoWidth,
-						height: logoHeight,
-						top: "0px"
-					}, 200);
+        thumbWidth: 100,
+        thumbHeight: 50,
+        thumbAmount: 3,
 
-				}
+        navigationType: 'none',
+        navigationArrows: 'solo',
+        navigationStyle: 'round',
 
-			}
+        touchenabled: 'on',
+        onHoverStop: 'on',
 
+        swipe_velocity: 0.7,
+        swipe_min_touches: 1,
+        swipe_max_touches: 1,
+        drag_block_vertical: false,
 
-			$(window).on("scroll", function() {
+        keyboardNavigation: 'on',
 
-				$this.checkStickyMenu();
+        navigationHAlign: 'center',
+        navigationVAlign: 'bottom',
+        navigationHOffset: 0,
+        navigationVOffset: 20,
 
-			});
+        soloArrowLeftHalign: 'left',
+        soloArrowLeftValign: 'center',
+        soloArrowLeftHOffset: 20,
+        soloArrowLeftVOffset: 0,
 
-			$this.checkStickyMenu();
+        soloArrowRightHalign: 'right',
+        soloArrowRightValign: 'center',
+        soloArrowRightHOffset: 20,
+        soloArrowRightVOffset: 0,
 
-		},
+        shadow: 0,
+        fullWidth: 'on',
+        fullScreen: 'off',
 
-		headerSearch: function() {
+        spinner: 'spinner0',
 
-			$("#searchForm").validate({
-				rules: {
-					q: {
-						required: true
-					}
-				},
-	            errorPlacement: function(error, element) {
+        stopLoop: 'off',
+        stopAfterLoops: -1,
+        stopAtSlide: -1,
 
-	            },
-				highlight: function (element) {
-					$(element)
-						.closest(".input-group")
-						.removeClass("has-success")
-						.addClass("has-error");
-				},
-				success: function (element) {
-					$(element)
-						.closest(".input-group")
-						.removeClass("has-error")
-						.addClass("has-success");
-				}
-			});
+        shuffle: 'off',
 
-		},
+        autoHeight: 'off',
+        forceFullWidth: 'off',
 
-		animations: function() {
+        hideThumbsOnMobile: 'off',
+        hideNavDelayOnMobile: 1500,
+        hideBulletsOnMobile: 'off',
+        hideArrowsOnMobile: 'off',
+        hideThumbsUnderResolution: 0,
 
-			// Animation Appear
-			$("[data-appear-animation]").each(function() {
+        hideSliderAtLimit: 0,
+        hideCaptionAtLimit: 0,
+        hideAllCaptionAtLilmit: 0,
+        startWithSlide: 0
+    };
 
-				var $this = $(this);
+    PluginRevolutionSlider.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-				$this.addClass("appear-animation");
+            this.$el = $el;
 
-				if(!$("html").hasClass("no-csstransitions") && $(window).width() > 767) {
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-					$this.appear(function() {
+            return this;
+        },
 
-						var delay = ($this.attr("data-appear-animation-delay") ? $this.attr("data-appear-animation-delay") : 1);
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-						if(delay > 1) $this.css("animation-delay", delay + "ms");
-						$this.addClass($this.attr("data-appear-animation"));
+            return this;
+        },
 
-						setTimeout(function() {
-							$this.addClass("appear-animation-visible");
-						}, delay);
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginRevolutionSlider.defaults, opts, {
+                wrapper: this.$el
+            });
 
-					}, {accX: 0, accY: -150});
+            return this;
+        },
 
-				} else {
+        build: function() {
+            if (!($.isFunction($.fn.revolution))) {
+                return this;
+            }
 
-					$this.addClass("appear-animation-visible");
+            this.options.wrapper.revolution(this.options);
 
-				}
+            return this;
+        }
+    };
 
-			});
+    // expose to scope
+    $.extend(theme, {
+        PluginRevolutionSlider: PluginRevolutionSlider
+    });
 
-			// Animation Progress Bars
-			$("[data-appear-progress-animation]").each(function() {
+    // jquery plugin
+    $.fn.themePluginRevolutionSlider = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-				var $this = $(this);
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginRevolutionSlider($this, opts);
+            }
 
-				$this.appear(function() {
+        });
+    }
 
-					var delay = ($this.attr("data-appear-animation-delay") ? $this.attr("data-appear-animation-delay") : 1);
+}).apply(this, [window.theme, jQuery]);
 
-					if(delay > 1) $this.css("animation-delay", delay + "ms");
-					$this.addClass($this.attr("data-appear-animation"));
+// Scroll to Top
+(function(theme, $) {
 
-					setTimeout(function() {
+    theme = theme || {};
 
-						$this.animate({
-							width: $this.attr("data-appear-progress-animation")
-						}, 1500, "easeOutQuad", function() {
-							$this.find(".progress-bar-tooltip").animate({
-								opacity: 1
-							}, 500, "easeOutQuad");
-						});
+    $.extend(theme, {
 
-					}, delay);
+        PluginScrollToTop: {
 
-				}, {accX: 0, accY: -50});
+            defaults: {
+                wrapper: $('body'),
+                offset: 150,
+                buttonClass: 'scroll-to-top',
+                iconClass: 'fa fa-chevron-up',
+                delay: 500,
+                visibleMobile: false,
+                label: false
+            },
 
-			});
+            initialize: function(opts) {
+                initialized = true;
 
-			// Count To
-			$(".counters [data-to]").each(function() {
+                this
+                    .setOptions(opts)
+                    .build()
+                    .events();
 
-				var $this = $(this);
+                return this;
+            },
 
-				$this.appear(function() {
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts);
 
-					$this.countTo({
-						onComplete: function() {
-							if($this.data("append")) {
-								$this.html($this.html() + $this.data("append"));
-							}
-						}
-					});
+                return this;
+            },
 
-				}, {accX: 0, accY: -150});
+            build: function() {
+                var self = this,
+                    $el;
 
-			});
+                // Base HTML Markup
+                $el = $('<a />')
+                    .addClass(self.options.buttonClass)
+                    .attr({
+                        'href': '#',
+                    })
+                    .append(
+                    $('<i />')
+                        .addClass(self.options.iconClass)
+                );
 
-			/* Circular Bars - Knob */
-			if(typeof($.fn.knob) != "undefined") {
-				$(".knob").knob({});
-			}
+                // Visible Mobile
+                if (!self.options.visibleMobile) {
+                    $el.addClass('hidden-mobile');
+                }
 
-		},
+                // Label
+                if (self.options.label) {
+                    $el.append(
+                        $('<span />').html(self.options.label)
+                    );
+                }
 
-		wordRotate: function() {
+                this.options.wrapper.append($el);
 
-			$(".word-rotate").each(function() {
+                this.$el = $el;
 
-				var $this = $(this),
-					itemsWrapper = $(this).find(".word-rotate-items"),
-					items = itemsWrapper.find("> span"),
-					firstItem = items.eq(0),
-					firstItemClone = firstItem.clone(),
-					itemHeight = 0,
-					currentItem = 1,
-					currentTop = 0;
+                return this;
+            },
 
-				itemHeight = firstItem.height();
+            events: function() {
+                var self = this,
+                    _isScrolling = false;
 
-				itemsWrapper.append(firstItemClone);
+                // Click Element Action
+                self.$el.on('click', function(e) {
+                    e.preventDefault();
+                    $('body, html').animate({
+                        scrollTop: 0
+                    }, self.options.delay);
+                    return false;
+                });
 
-				$this
-					.height(itemHeight)
-					.addClass("active");
+                // Show/Hide Button on Window Scroll event.
+                $(window).scroll(function() {
 
-				setInterval(function() {
+                    if (!_isScrolling) {
 
-					currentTop = (currentItem * itemHeight);
+                        _isScrolling = true;
 
-					itemsWrapper.animate({
-						top: -(currentTop) + "px"
-					}, 300, "easeOutQuad", function() {
+                        if ($(window).scrollTop() > self.options.offset) {
 
-						currentItem++;
+                            self.$el.stop(true, true).addClass('visible');
+                            _isScrolling = false;
 
-						if(currentItem > items.length) {
+                        } else {
 
-							itemsWrapper.css("top", 0);
-							currentItem = 1;
+                            self.$el.stop(true, true).removeClass('visible');
+                            _isScrolling = false;
 
-						}
+                        }
 
-					});
+                    }
 
-				}, 2000);
+                });
 
-			});
+                return this;
+            }
 
-		},
+        }
 
-		newsletter: function() {
+    });
 
-			$("#newsletterForm").validate({
-				submitHandler: function(form) {
+}).apply(this, [window.theme, jQuery]);
 
-					$.ajax({
-						type: "POST",
-						url: $("#newsletterForm").attr("action"),
-						data: {
-							"email": $("#newsletterForm #email").val()
-						},
-						dataType: "json",
-						success: function (data) {
-							if (data.response == "success") {
+// Sort
+(function(theme, $) {
 
-								$("#newsletterSuccess").removeClass("hidden");
-								$("#newsletterError").addClass("hidden");
+    theme = theme || {};
 
-								$("#newsletterForm #email")
-									.val("")
-									.blur()
-									.closest(".control-group")
-									.removeClass("success")
-									.removeClass("error");
+    var instanceName = '__sort';
 
-							} else {
+    var PluginSort = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-								$("#newsletterError").html(data.message);
-								$("#newsletterError").removeClass("hidden");
-								$("#newsletterSuccess").addClass("hidden");
+    PluginSort.defaults = {
+        useHash: true,
+        itemSelector: 'li',
+        layoutMode: 'masonry',
+        filter: '*'
+    };
 
-								$("#newsletterForm #email")
-									.blur()
-									.closest(".control-group")
-									.removeClass("success")
-									.addClass("error");
+    PluginSort.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-							}
-						}
-					});
+            this.$el = $el;
 
-				},
-				rules: {
-					email: {
-						required: true,
-						email: true
-					}
-				},
-	            errorPlacement: function(error, element) {
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-	            },
-				highlight: function (element) {
-					$(element)
-						.closest(".control-group")
-						.removeClass("success")
-						.addClass("error");
-				},
-				success: function (element) {
-					$(element)
-						.closest(".control-group")
-						.removeClass("error")
-						.addClass("success");
-				}
-			});
+            return this;
+        },
 
-		},
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-		featuredBoxes: function() {
+            return this;
+        },
 
-			$("div.featured-box").css("height", "auto");
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginSort.defaults, opts, {
+                wrapper: this.$el
+            });
 
-			$("div.featured-boxes").each(function() {
+            return this;
+        },
 
-				var wrapper = $(this);
-				var minBoxHeight = 0;
+        build: function() {
+            if (!($.isFunction($.fn.isotope))) {
+                return this;
+            }
 
-				$("div.featured-box", wrapper).each(function() {
-					if($(this).height() > minBoxHeight)
-						minBoxHeight = $(this).height();
-				});
+            var self = this,
+                $source = this.options.wrapper,
+                $destination = $('.sort-destination[data-sort-id="' + $source.attr('data-sort-id') + '"]');
 
-				$("div.featured-box", wrapper).height(minBoxHeight);
+            if ($destination.get(0)) {
 
-			});
+                self.$source = $source;
+                self.$destination = $destination;
 
-		},
+                self.setParagraphHeight($destination);
 
-		owlCarousel: function(options) {
+                $(window).load(function() {
 
-			var total = $("div.owl-carousel:not(.manual)").length,
-				count = 0;
+                    $destination.isotope(self.options).isotope('layout');
 
-			$("div.owl-carousel:not(.manual)").each(function() {
+                    self.$destination.isotope('on', 'layoutComplete', function(isoInstance, laidOutItems) {
+                        if (self.options.useHash || typeof(isoInstance.options.filter != 'undefined')) {
+                            if (window.location.hash != '' || isoInstance.options.filter.replace('.', '') != '*') {
+                                window.location.hash = isoInstance.options.filter.replace('.', '');
+                            }
+                        }
+                    });
 
-				var slider = $(this);
+                    self.events();
 
-				var defaults = {
-					 // Most important owl features
-					items : 5,
-					itemsCustom : false,
-					itemsDesktop : [1199,4],
-					itemsDesktopSmall : [980,3],
-					itemsTablet: [768,2],
-					itemsTabletSmall: false,
-					itemsMobile : [479,1],
-					singleItem : true,
-					itemsScaleUp : false,
+                });
 
-					//Basic Speeds
-					slideSpeed : 200,
-					paginationSpeed : 800,
-					rewindSpeed : 1000,
+            }
 
-					//Autoplay
-					autoPlay : false,
-					stopOnHover : false,
+            return this;
+        },
 
-					// Navigation
-					navigation : false,
-					navigationText : ["<i class=\"icon icon-chevron-left\"></i>","<i class=\"icon icon-chevron-right\"></i>"],
-					rewindNav : true,
-					scrollPerPage : false,
+        events: function() {
+            var self = this,
+                filter = null;
 
-					//Pagination
-					pagination : true,
-					paginationNumbers: false,
+            self.$source.find('a').click(function(e) {
+                e.preventDefault();
 
-					// Responsive
-					responsive: true,
-					responsiveRefreshRate : 200,
-					responsiveBaseWidth: window,
+                filter = $(this).parent().attr('data-option-value');
 
-					// CSS Styles
-					baseClass : "owl-carousel",
-					theme : "owl-theme",
+                self.setFilter(filter);
 
-					//Lazy load
-					lazyLoad : false,
-					lazyFollow : true,
-					lazyEffect : "fade",
+                return this;
+            });
 
-					//Auto height
-					autoHeight : false,
+            if (self.options.useHash) {
+                self.hashEvents();
+            }
 
-					//JSON
-					jsonPath : false,
-					jsonSuccess : false,
+            return this;
+        },
 
-					//Mouse Events
-					dragBeforeAnimFinish : true,
-					mouseDrag : true,
-					touchDrag : true,
+        setFilter: function(filter) {
+            var self = this;
 
-					//Transitions
-					transitionStyle : false,
+            if (self.filter == filter) {
+                return this;
+            }
 
-					// Other
-					addClassActive : false,
+            self.$source.find('li.active').removeClass('active');
+            self.$source.find('li[data-option-value="' + filter + '"]').addClass('active');
 
-					//Callbacks
-					beforeUpdate : false,
-					afterUpdate : false,
-					beforeInit: false,
-					afterInit: false,
-					beforeMove: false,
-					afterMove: false,
-					afterAction: false,
-					startDragging : false,
-					afterLazyLoad : false
-				}
+            self.$destination.isotope({
+                filter: filter
+            });
 
-				var config = $.extend({}, defaults, options, slider.data("plugin-options"));
+            self.filter = filter;
 
-				// Initialize Slider
-				slider.owlCarousel(config).addClass("owl-carousel-init");
+            return this;
+        },
 
-			});
+        hashEvents: function() {
+            var self = this,
+                hash = null,
+                hashFilter = null,
+                initHashFilter = '.' + location.hash.replace('#', '');
 
-		},
+            if (initHashFilter != '.' && initHashFilter != '.*') {
+                self.setFilter(initHashFilter);
+            }
 
-		sort: function() {
+            $(window).bind('hashchange', function(e) {
 
-			$("ul.sort-source").each(function() {
+                hashFilter = '.' + location.hash.replace('#', '');
+                hash = (hashFilter == '.' || hashFilter == '.*' ? '*' : hashFilter);
 
-				var source = $(this);
-				var destination = $("ul.sort-destination[data-sort-id=" + $(this).attr("data-sort-id") + "]");
+                self.setFilter(hash);
 
-				if(destination.get(0)) {
+            });
 
-					var minParagraphHeight = 0;
-					var paragraphs = $("span.thumb-info-caption p", destination);
+            return this;
+        },
 
-					paragraphs.each(function() {
-						if($(this).height() > minParagraphHeight)
-							minParagraphHeight = ($(this).height() + 10);
-					});
+        setParagraphHeight: function() {
+            var self = this,
+                minParagraphHeight = 0,
+                paragraphs = $('span.thumb-info-caption p', self.$destination);
 
-					paragraphs.height(minParagraphHeight);
+            paragraphs.each(function() {
+                if ($(this).height() > minParagraphHeight) {
+                    minParagraphHeight = ($(this).height() + 10);
+                }
+            });
 
-					$(window).load(function() {
+            paragraphs.height(minParagraphHeight);
 
-						destination.isotope({
-							itemSelector: "li",
-							layoutMode: 'sloppyMasonry'
-						});
+            return this;
+        }
 
-						source.find("a").click(function(e) {
+    };
 
-							e.preventDefault();
+    // expose to scope
+    $.extend(theme, {
+        PluginSort: PluginSort
+    });
 
-							var $this = $(this),
-								filter = $this.parent().attr("data-option-value");
+    // jquery plugin
+    $.fn.themePluginSort = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-							source.find("li.active").removeClass("active");
-							$this.parent().addClass("active");
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginSort($this, opts);
+            }
 
-							destination.isotope({
-								filter: filter
-							});
+        });
+    }
 
-							if(window.location.hash != "" || filter.replace(".","") != "*") {
-								self.location = "#" + filter.replace(".","");
-							}
+}).apply(this, [window.theme, jQuery]);
 
-							return false;
+// Toggle
+(function(theme, $) {
 
-						});
+    theme = theme || {};
 
-						$(window).bind("hashchange", function(e) {
+    var instanceName = '__toggle';
 
-							var hashFilter = "." + location.hash.replace("#",""),
-								hash = (hashFilter == "." || hashFilter == ".*" ? "*" : hashFilter);
+    var PluginToggle = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-							source.find("li.active").removeClass("active");
-							source.find("li[data-option-value='" + hash + "']").addClass("active");
+    PluginToggle.defaults = {
+        duration: 350,
+        isAccordion: false,
+        addIcons: true
+    };
 
-							destination.isotope({
-								filter: hash
-							});
+    PluginToggle.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-						});
+            this.$el = $el;
 
-						var hashFilter = "." + (location.hash.replace("#","") || "*");
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-						var initFilterEl = source.find("li[data-option-value='" + hashFilter + "'] a");
+            return this;
+        },
 
-						if(initFilterEl.get(0)) {
-							source.find("li[data-option-value='" + hashFilter + "'] a").click();
-						} else {
-							source.find("li:first-child a").click();
-						}
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-					});
+            return this;
+        },
 
-				}
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginToggle.defaults, opts, {
+                wrapper: this.$el
+            });
 
-			});
+            return this;
+        },
 
-		},
+        build: function() {
+            var self = this,
+                $wrapper = this.options.wrapper,
+                $items = $wrapper.find('.toggle'),
+                $el = null;
 
-		toggle: function() {
+            $items.each(function() {
+                $el = $(this);
 
-			var $this = this,
-				previewParClosedHeight = 25;
+                if (self.options.addIcons) {
+                    $el.find('> label').prepend(
+                        $('<i />').addClass('fa fa-plus'),
+                        $('<i />').addClass('fa fa-minus')
+                    );
+                }
 
-			$("section.toggle > label").prepend($("<i />").addClass("icon icon-plus"));
-			$("section.toggle > label").prepend($("<i />").addClass("icon icon-minus"));
-			$("section.toggle.active > p").addClass("preview-active");
-			$("section.toggle.active > div.toggle-content").slideDown(350, function() {});
+                if ($el.hasClass('active')) {
+                    $el.find('> p').addClass('preview-active');
+                    $el.find('> .toggle-content').slideDown(self.options.duration);
+                }
 
-			$("section.toggle > label").click(function(e) {
+                self.events($el);
+            });
 
-				var parentSection = $(this).parent(),
-					parentWrapper = $(this).parents("div.toogle"),
-					previewPar = false,
-					isAccordion = parentWrapper.hasClass("toogle-accordion");
+            if (self.options.isAccordion) {
+                self.options.duration = self.options.duration / 2;
+            }
 
-				if(isAccordion && typeof(e.originalEvent) != "undefined") {
-					parentWrapper.find("section.toggle.active > label").trigger("click");
-				}
+            return this;
+        },
 
-				parentSection.toggleClass("active");
+        events: function($el) {
+            var self = this,
+                previewParCurrentHeight = 0,
+                previewParAnimateHeight = 0,
+                toggleContent = null;
 
-				// Preview Paragraph
-				if(parentSection.find("> p").get(0)) {
+            $el.find('> label').click(function(e) {
 
-					previewPar = parentSection.find("> p");
-					var previewParCurrentHeight = previewPar.css("height");
-					previewPar.css("height", "auto");
-					var previewParAnimateHeight = previewPar.css("height");
-					previewPar.css("height", previewParCurrentHeight);
+                var $this = $(this),
+                    parentSection = $this.parent(),
+                    parentWrapper = $this.parents('.toggle'),
+                    previewPar = null,
+                    closeElement = null;
 
-				}
+                if (self.options.isAccordion && typeof(e.originalEvent) != 'undefined') {
+                    closeElement = parentWrapper.find('.toggle.active > label');
 
-				// Content
-				var toggleContent = parentSection.find("> div.toggle-content");
+                    if (closeElement[0] == $this[0]) {
+                        return;
+                    }
+                }
 
-				if(parentSection.hasClass("active")) {
+                parentSection.toggleClass('active');
 
-					$(previewPar).animate({
-						height: previewParAnimateHeight
-					}, 350, function() {
-						$(this).addClass("preview-active");
-					});
+                // Preview Paragraph
+                if (parentSection.find('> p').get(0)) {
 
-					toggleContent.slideDown(350, function() {});
+                    previewPar = parentSection.find('> p');
+                    previewParCurrentHeight = previewPar.css('height');
+                    previewPar.css('height', 'auto');
+                    previewParAnimateHeight = previewPar.css('height');
+                    previewPar.css('height', previewParCurrentHeight);
 
-				} else {
+                }
 
-					$(previewPar).animate({
-						height: previewParClosedHeight
-					}, 350, function() {
-						$(this).removeClass("preview-active");
-					});
+                // Content
+                toggleContent = parentSection.find('> .toggle-content');
 
-					toggleContent.slideUp(350, function() {});
+                if (parentSection.hasClass('active')) {
 
-				}
+                    $(previewPar).animate({
+                        height: previewParAnimateHeight
+                    }, self.options.duration, function() {
+                        $(this).addClass('preview-active');
+                    });
 
-			});
+                    toggleContent.slideDown(self.options.duration, function() {
+                        if (closeElement) {
+                            closeElement.trigger('click');
+                        }
+                    });
 
-		},
+                } else {
 
-		lightbox: function(options) {
+                    $(previewPar).animate({
+                        height: 0
+                    }, self.options.duration, function() {
+                        $(this).removeClass('preview-active');
+                    });
 
-			if(typeof($.magnificPopup) == "undefined") {
-				return false;
-			}
+                    toggleContent.slideUp(self.options.duration);
 
-			// Internationalization of Lightbox
-			$.extend(true, $.magnificPopup.defaults, {
-				tClose: 'Close (Esc)', // Alt text on close button
-				tLoading: 'Loading...', // Text that is displayed during loading. Can contain %curr% and %total% keys
-				gallery: {
-					tPrev: 'Previous (Left arrow key)', // Alt text on left arrow
-					tNext: 'Next (Right arrow key)', // Alt text on right arrow
-					tCounter: '%curr% of %total%' // Markup for "1 of 7" counter
-				},
-				image: {
-					tError: '<a href="%url%">The image</a> could not be loaded.' // Error message when image could not be loaded
-				},
-				ajax: {
-					tError: '<a href="%url%">The content</a> could not be loaded.' // Error message when ajax request failed
-				}
-			});
+                }
 
-			$(".lightbox").each(function() {
+            });
+        }
+    };
 
-				var el = $(this);
+    // expose to scope
+    $.extend(theme, {
+        PluginToggle: PluginToggle
+    });
 
-				var config, defaults = {}
-				if(el.data("plugin-options"))
-					config = $.extend({}, defaults, options, el.data("plugin-options"));
+    // jquery plugin
+    $.fn.themePluginToggle = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-				$(this).magnificPopup(config);
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginToggle($this, opts);
+            }
 
-			});
+        });
+    }
 
-		},
+}).apply(this, [window.theme, jQuery]);
 
-		flickrFeed: function(options) {
+// Tweets
+(function(theme, $) {
 
-			$("ul.flickr-feed").each(function() {
+    theme = theme || {};
 
-				var el = $(this);
+    var instanceName = '__tweets';
 
-				var defaults = {
-					limit: 6,
-					qstrings: {
-						id: ''
-					},
-					itemTemplate: '<li><a href="{{image_b}}"><span class="thumbnail"><img alt="{{title}}" src="{{image_s}}" /></span></a></li>'
-				}
+    var PluginTweets = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-				var config = $.extend({}, defaults, options, el.data("plugin-options"));
+    PluginTweets.defaults = {
+        username: null,
+        count: 2,
+        URL: 'php/twitter-feed.php'
+    };
 
-				el.jflickrfeed(config, function(data) {
+    PluginTweets.prototype = {
+        initialize: function($el, opts) {
+            if ($el.data(instanceName)) {
+                return this;
+            }
 
-					el.magnificPopup({
-						delegate: "a",
-						type: "image",
-						gallery: {
-							enabled: true,
-							navigateByImgClick: true,
-							preload: [0,1]
-						},
-						zoom: {
-							enabled: true,
-							duration: 300,
-							opener: function(element) {
-								return element.find('img');
-							}
-						}
-					});
+            this.$el = $el;
 
-				});
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
+            return this;
+        },
 
-			});
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-		},
+            return this;
+        },
 
-		mediaElement: function(options) {
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginTweets.defaults, opts, {
+                wrapper: this.$el
+            });
 
-			if(typeof(mejs) == "undefined") {
-				return false;
-			}
+            return this;
+        },
 
-			$("video:not(.manual)").each(function() {
+        build: function() {
+            if (typeof twitterFeed == 'undefined' || this.options.username == null) {
+                return this;
+            }
 
-				var el = $(this);
+            twitterFeed.initialize(this.options);
 
-				var defaults = {
-					defaultVideoWidth: 480,
-					defaultVideoHeight: 270,
-					videoWidth: -1,
-					videoHeight: -1,
-					audioWidth: 400,
-					audioHeight: 30,
-					startVolume: 0.8,
-					loop: false,
-					enableAutosize: true,
-					features: ['playpause','progress','current','duration','tracks','volume','fullscreen'],
-					alwaysShowControls: false,
-					iPadUseNativeControls: false,
-					iPhoneUseNativeControls: false,
-					AndroidUseNativeControls: false,
-					alwaysShowHours: false,
-					showTimecodeFrameCount: false,
-					framesPerSecond: 25,
-					enableKeyboard: true,
-					pauseOtherPlayers: true,
-					keyActions: []
-				}
+            return this;
+        }
+    };
 
-				var config = $.extend({}, defaults, options, el.data("plugin-options"));
+    // expose to scope
+    $.extend(theme, {
+        PluginTweets: PluginTweets
+    });
 
-				el.mediaelementplayer(config);
+    // jquery plugin
+    $.fn.themePluginTweets = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
 
-			});
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginTweets($this, opts);
+            }
 
-		},
+        });
+    }
 
-		parallax: function() {
+}).apply(this, [window.theme, jQuery]);
 
-			if(typeof($.stellar) == "undefined") {
-				return false;
-			}
+// Validation
+(function(theme, $) {
 
-			$(window).load(function () {
+    theme = theme || {};
 
-				if($(".parallax").get(0)) {
-					if(!Modernizr.touch) {
-						$(window).stellar({
-							responsive:true,
-							scrollProperty: 'scroll',
-							parallaxElements: false,
-							horizontalScrolling: false,
-							horizontalOffset: 0,
-							verticalOffset: 0
-						});
-					} else {
-						$(".parallax").addClass("disabled");
-					}
-				}
-			});
+    $.extend(theme, {
 
-		},
+        PluginValidation: {
 
-		latestTweets: function() {
+            defaults: {
+                validator: {
+                    highlight: function(element) {
+                        $(element)
+                            .parent()
+                            .removeClass('has-success')
+                            .addClass('has-error');
+                    },
+                    success: function(element) {
+                        $(element)
+                            .parent()
+                            .removeClass('has-error')
+                            .addClass('has-success')
+                            .find('label.error')
+                            .remove();
+                    },
+                    errorPlacement: function(error, element) {
+                        if (element.attr('type') == 'radio' || element.attr('type') == 'checkbox') {
+                            error.appendTo(element.parent().parent());
+                        } else {
+                            error.insertAfter(element);
+                        }
+                    }
+                },
+                validateCaptchaURL: 'php/contact-form-verify-captcha.php'
+            },
 
-			var wrapper = $("#tweet"),
-				accountId = wrapper.data("account-id");
+            initialize: function(opts) {
+                initialized = true;
 
-			if(wrapper.get(0) && accountId != "") {
-				getTwitters("tweet", {
-					id: accountId,
-					count: 2
-				});
+                this
+                    .setOptions(opts)
+                    .build();
 
-				wrapper.before($("<a />").addClass("twitter-account").html("@" + accountId).attr("href", "http://www.twitter.com/" + accountId).attr("target", "_blank"));
+                return this;
+            },
 
-			} else {
-				wrapper.empty();
-			}
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts);
 
-		},
+                return this;
+            },
 
-		fixRevolutionSlider: function() {
+            build: function() {
+                var self = this;
 
-			$(".revslider-initialised").each(function() {
-				try{
-					$(this).revredraw();
-				} catch(e) {}
-			});
+                if (!($.isFunction($.validator))) {
+                    return this;
+                }
 
-		},
+                self.addMethods();
+                self.setMessageGroups();
 
-		productInfoBox: function() {
+                $.validator.setDefaults(self.options.validator);
 
-			if($(window).width() > 991) {
-				$(".product-thumb-info").css("min-height", "auto");
+                return this;
+            },
 
-				$(".product-thumb-info-list").each(function() {
+            addMethods: function() {
+                var self = this;
 
-					var wrapper = $(this);
-					var minBoxHeight = 0;
+                $.validator.addMethod('captcha', function(value, element, params) {
+                    var captchaValid = false;
 
-					$(".product-thumb-info", wrapper).each(function() {
-						if($(this).height() > minBoxHeight)
-							minBoxHeight = $(this).height();
-					});
+                    $.ajax({
+                        url: self.options.validateCaptchaURL,
+                        type: 'POST',
+                        async: false,
+                        dataType: 'json',
+                        data: {
+                            captcha: $.trim(value)
+                        },
+                        success: function(data) {
+                            if (data.response == 'success') {
+                                captchaValid = true;
+                            }
+                        }
+                    });
 
-					$(".product-thumb-info", wrapper).height(minBoxHeight);
+                    if (captchaValid) {
+                        return true;
+                    }
 
-				});
-			} else {
-				$(".product-thumb-info").css("min-height", "auto");
-			}
+                }, '');
 
-		},
+            },
 
-		account: function() {
+            setMessageGroups: function() {
 
-			var headerAccountWrapper = $("#headerAccount"),
-				closeEventAdded = false;
+                $('.checkbox-group[data-msg-required], .radio-group[data-msg-required]').each(function() {
+                    var message = $(this).data('msg-required');
+                    $(this).find('input').attr('data-msg-required', message);
+                });
 
-			// Events
-			headerAccountWrapper.find("input").on("focus", function() {
-				headerAccountWrapper.addClass("open");
+            }
 
-				if(closeEventAdded) return;
+        }
 
-				$(document).mouseup(function(e) {
-				    if (!headerAccountWrapper.is(e.target) && headerAccountWrapper.has(e.target).length === 0) {
-			        	headerAccountWrapper.removeClass("open");
-			    	}
-				});
+    });
 
-				closeEventAdded = true;
-			});
+    // initialize
+    theme.PluginValidation.initialize();
 
-			$("#headerSignUp").on("click", function(e) {
-				e.preventDefault();
-				headerAccountWrapper.addClass("signup").removeClass("signin").removeClass("recover");
-				headerAccountWrapper.find(".signup-form input:first").focus();
-			});
+}).apply(this, [window.theme, jQuery]);
 
-			$("#headerSignIn").on("click", function(e) {
-				e.preventDefault();
-				headerAccountWrapper.addClass("signin").removeClass("signup").removeClass("recover");
-				headerAccountWrapper.find(".signin-form input:first").focus();
-			});
+// Video Background
+(function(theme, $) {
 
-			$("#headerRecover").on("click", function(e) {
-				e.preventDefault();
-				headerAccountWrapper.addClass("recover").removeClass("signup").removeClass("signin");
-				headerAccountWrapper.find(".recover-form input:first").focus();
-			});
+    theme = theme || {};
 
-			$("#headerRecoverCancel").on("click", function(e) {
-				e.preventDefault();
-				headerAccountWrapper.addClass("signin").removeClass("signup").removeClass("recover");
-				headerAccountWrapper.find(".signin-form input:first").focus();
-			});
+    var instanceName = '__videobackground';
 
-		}
+    var PluginVideoBackground = function($el, opts) {
+        return this.initialize($el, opts);
+    };
 
-	};
+    PluginVideoBackground.defaults = {
+        overlay: true,
+        volume: 1,
+        playbackRate: 1,
+        muted: true,
+        loop: true,
+        autoplay: true,
+        position: '50% 50%',
+        posterType: 'detect'
+    };
 
-	Core.initialize();
+    PluginVideoBackground.prototype = {
+        initialize: function($el, opts) {
+            this.$el = $el;
 
-	$(window).load(function () {
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
 
-		// Sticky Meny
-		Core.stickyMenu();
+            return this;
+        },
 
-	});
+        setData: function() {
+            this.$el.data(instanceName, this);
 
-})();
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginVideoBackground.defaults, opts, {
+                path: this.$el.data('video-path'),
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+
+            if (!($.isFunction($.fn.vide)) || (!this.options.path)) {
+                return this;
+            }
+
+            if (this.options.overlay) {
+                this.options.wrapper.prepend(
+                    $('<div />').addClass('video-overlay')
+                );
+            }
+
+            this.options.wrapper.vide(this.options.path, this.options);
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginVideoBackground: PluginVideoBackground
+    });
+
+    // jquery plugin
+    $.fn.themePluginVideoBackground = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginVideoBackground($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [window.theme, jQuery]);
+
+// Word Rotate
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var instanceName = '__wordRotate';
+
+    var PluginWordRotate = function($el, opts) {
+        return this.initialize($el, opts);
+    };
+
+    PluginWordRotate.defaults = {
+        delay: 2000
+    };
+
+    PluginWordRotate.prototype = {
+        initialize: function($el, opts) {
+            if ( $el.data( instanceName ) ) {
+                return this;
+            }
+
+            this.$el = $el;
+
+            this
+                .setData()
+                .setOptions(opts)
+                .build();
+
+            return this;
+        },
+
+        setData: function() {
+            this.$el.data(instanceName, this);
+
+            return this;
+        },
+
+        setOptions: function(opts) {
+            this.options = $.extend(true, {}, PluginWordRotate.defaults, opts, {
+                wrapper: this.$el
+            });
+
+            return this;
+        },
+
+        build: function() {
+            var $el = this.options.wrapper,
+                itemsWrapper = $el.find(".word-rotate-items"),
+                items = itemsWrapper.find("> span"),
+                firstItem = items.eq(0),
+                firstItemClone = firstItem.clone(),
+                itemHeight = firstItem.height(),
+                currentItem = 1,
+                currentTop = 0;
+
+            itemsWrapper.append(firstItemClone);
+
+            $el
+                .height(itemHeight)
+                .addClass("active");
+
+            setInterval(function() {
+
+                currentTop = (currentItem * itemHeight);
+
+                itemsWrapper.animate({
+                    top: -(currentTop) + "px"
+                }, 300, "easeOutQuad", function() {
+
+                    currentItem++;
+
+                    if(currentItem > items.length) {
+
+                        itemsWrapper.css("top", 0);
+                        currentItem = 1;
+
+                    }
+
+                });
+
+            }, this.options.delay);
+
+            return this;
+        }
+    };
+
+    // expose to scope
+    $.extend(theme, {
+        PluginWordRotate: PluginWordRotate
+    });
+
+    // jquery plugin
+    $.fn.themePluginWordRotate = function(opts) {
+        return this.map(function() {
+            var $this = $(this);
+
+            if ($this.data(instanceName)) {
+                return $this.data(instanceName);
+            } else {
+                return new PluginWordRotate($this, opts);
+            }
+
+        });
+    }
+
+}).apply(this, [ window.theme, jQuery ]);
+
+// Account
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var initialized = false;
+
+    $.extend(theme, {
+
+        Account: {
+
+            defaults: {
+                wrapper: $('#headerAccount')
+            },
+
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
+
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
+
+                this
+                    .setOptions(opts)
+                    .events();
+
+                return this;
+            },
+
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+
+                return this;
+            },
+
+            events: function() {
+                var self = this;
+
+                self.$wrapper.find('input').on('focus', function() {
+                    self.$wrapper.addClass('open');
+
+                    $(document).mouseup(function(e) {
+                        if (!self.$wrapper.is(e.target) && self.$wrapper.has(e.target).length === 0) {
+                            self.$wrapper.removeClass('open');
+                        }
+                    });
+                });
+
+                $('#headerSignUp').on('click', function(e) {
+                    e.preventDefault();
+                    self.$wrapper.addClass('signup').removeClass('signin').removeClass('recover');
+                    self.$wrapper.find('.signup-form input:first').focus();
+                });
+
+                $('#headerSignIn').on('click', function(e) {
+                    e.preventDefault();
+                    self.$wrapper.addClass('signin').removeClass('signup').removeClass('recover');
+                    self.$wrapper.find('.signin-form input:first').focus();
+                });
+
+                $('#headerRecover').on('click', function(e) {
+                    e.preventDefault();
+                    self.$wrapper.addClass('recover').removeClass('signup').removeClass('signin');
+                    self.$wrapper.find('.recover-form input:first').focus();
+                });
+
+                $('#headerRecoverCancel').on('click', function(e) {
+                    e.preventDefault();
+                    self.$wrapper.addClass('signin').removeClass('signup').removeClass('recover');
+                    self.$wrapper.find('.signin-form input:first').focus();
+                });
+            }
+
+        }
+
+    });
+
+}).apply(this, [window.theme, jQuery]);
+
+// Nav
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var initialized = false;
+
+    $.extend(theme, {
+
+        Nav: {
+
+            defaults: {
+                wrapper: $('#mainMenu'),
+                mobileMenuScroll: true,
+                fixParentItems: true
+            },
+
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
+
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
+
+                this
+                    .setOptions(opts)
+                    .build()
+                    .events();
+
+                return this;
+            },
+
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+
+                return this;
+            },
+
+            build: function() {
+                // Responsive Menu Events
+                this.responsiveNavFixes();
+
+                // Mega Menu
+                this.megaMenu();
+
+                // Mobile Menu Scroll to Current Item
+                this.mobileMenuScroll();
+
+                // Fix/Remove Dropdown Class if it doesn't Have Submenu
+                this.fixParentItems();
+
+                return this;
+            },
+
+            events: function() {
+                var self = this;
+
+                // Mobile Redirect - (Ignores the Dropdown from Bootstrap)
+                $('.mobile-redirect').on('click', function() {
+                    if ($(window).width() < 991) {
+                        self.location = $(this).attr('href');
+                    }
+                });
+
+                // Anchors Position
+                $('[data-hash]').on('click', function(e) {
+                    e.preventDefault();
+
+                    var header = $('#header'),
+                        headerHeight = header.height(),
+                        target = $(this).attr('href'),
+                        topGap = 0;
+
+                    if ($(window).width() > 991) {
+                        topGap = (headerHeight + 50);
+                    } else {
+                        topGap = 30;
+                    }
+
+                    $('html, body').animate({
+                        scrollTop: $(target).offset().top - topGap
+                    }, 600, 'easeOutQuad');
+
+                    return this;
+                });
+
+                return this;
+            },
+
+            responsiveNavFixes: function() {
+                var self = this,
+                    addActiveClass = false;
+
+                self.$wrapper.find('.dropdown-toggle[href]:not([href=#])').each(function() {
+                    $(this)
+                        .addClass('disabled')
+                        .parent()
+                        .prepend(
+                        $('<a />')
+                            .addClass('dropdown-toggle extra')
+                            .attr('href', '#')
+                            .append(
+                            $('<i />')
+                                .addClass('fa fa-angle-down')
+                        )
+                    );
+                });
+
+                self.$wrapper.find('li.dropdown > a:not(.disabled), li.dropdown-submenu > a:not(.disabled)').on('click', function(e) {
+
+                    e.preventDefault();
+
+                    if ($(window).width() > 991) {
+                        return this;
+                    }
+
+                    addActiveClass = $(this).parent().hasClass('resp-active');
+
+                    self.$wrapper.find('.resp-active').removeClass('resp-active');
+
+                    if (!addActiveClass) {
+                        $(this).parents('li').addClass('resp-active');
+                    }
+
+                    return this;
+
+                });
+            },
+
+            megaMenu: function() {
+                $(document).on('click', '.mega-menu .dropdown-menu', function(e) {
+                    e.stopPropagation()
+                });
+            },
+
+            mobileMenuScroll: function() {
+                var self = this;
+
+                this.$wrapper.find('> li > a:not(.disabled)').on('click', function() {
+                    if ($(window).width() < 991 && self.options.mobileMenuScroll && !$('body').hasClass('sticky-menu-active') && !$('#header').hasClass('fixed')) {
+                        $('html, body').animate({
+                            scrollTop: $(this).offset().top
+                        }, 600, 'easeOutQuad');
+                    }
+                });
+            },
+
+            fixParentItems: function() {
+                if (!this.options.fixParentItems) {
+                    return this;
+                }
+
+                this.$wrapper.find('> li.dropdown').each(function() {
+                    if (!$(this).find('ul').get(0)) {
+                        $(this).removeClass('dropdown');
+                        $(this).find('.dropdown-toggle').removeClass('dropdown-toggle');
+                    }
+                });
+            }
+
+        }
+
+    });
+
+}).apply(this, [window.theme, jQuery]);
+
+// Newsletter
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var initialized = false;
+
+    $.extend(theme, {
+
+        Newsletter: {
+
+            defaults: {
+                wrapper: $('#newsletterForm')
+            },
+
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
+
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
+
+                this
+                    .setOptions(opts)
+                    .build();
+
+                return this;
+            },
+
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+
+                return this;
+            },
+
+            build: function() {
+                if (!($.isFunction($.fn.validate))) {
+                    return this;
+                }
+
+                var self = this,
+                    $email = self.$wrapper.find('#newsletterEmail'),
+                    $success = $('#newsletterSuccess'),
+                    $error = $('#newsletterError');
+
+                self.$wrapper.validate({
+                    submitHandler: function(form) {
+
+                        $.ajax({
+                            type: 'POST',
+                            url: self.$wrapper.attr('action'),
+                            data: {
+                                'email': $email.val()
+                            },
+                            dataType: 'json',
+                            success: function(data) {
+                                if (data.response == 'success') {
+
+                                    $success.removeClass('hidden');
+                                    $error.addClass('hidden');
+
+                                    $email
+                                        .val('')
+                                        .blur()
+                                        .closest('.control-group')
+                                        .removeClass('success')
+                                        .removeClass('error');
+
+                                } else {
+
+                                    $error.html(data.message);
+                                    $error.removeClass('hidden');
+                                    $success.addClass('hidden');
+
+                                    $email
+                                        .blur()
+                                        .closest('.control-group')
+                                        .removeClass('success')
+                                        .addClass('error');
+
+                                }
+                            }
+                        });
+
+                    },
+                    rules: {
+                        newsletterEmail: {
+                            required: true,
+                            email: true
+                        }
+                    },
+                    errorPlacement: function(error, element) {
+
+                    }
+                });
+
+                return this;
+            }
+
+        }
+
+    });
+
+}).apply(this, [window.theme, jQuery]);
+
+// Search
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var initialized = false;
+
+    $.extend(theme, {
+
+        Search: {
+
+            defaults: {
+                wrapper: $('#searchForm')
+            },
+
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
+
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
+
+                this
+                    .setOptions(opts)
+                    .build();
+
+                return this;
+            },
+
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+
+                return this;
+            },
+
+            build: function() {
+                if (!($.isFunction($.fn.validate))) {
+                    return this;
+                }
+
+                this.$wrapper.validate({
+                    errorPlacement: function(error, element) {}
+                });
+
+                return this;
+            }
+
+        }
+
+    });
+
+}).apply(this, [window.theme, jQuery]);
+
+// Sticky Menu
+(function(theme, $) {
+
+    theme = theme || {};
+
+    var initialized = false;
+
+    $.extend(theme, {
+
+        StickyMenu: {
+
+            defaults: {
+                wrapper: $('#header'),
+                stickyEnabled: true,
+                stickyEnableOnBoxed: true,
+                stickyEnableOnMobile: false,
+                menuAfterHeader: false,
+                logoPaddingTop: 28,
+                logoSmallWidth: 82,
+                logoSmallHeight: 40
+            },
+
+            initialize: function($wrapper, opts) {
+                if (initialized) {
+                    return this;
+                }
+
+                initialized = true;
+                this.$wrapper = ($wrapper || this.defaults.wrapper);
+
+                this
+                    .setOptions(opts)
+                    .build()
+                    .events();
+
+                return this;
+            },
+
+            setOptions: function(opts) {
+                this.options = $.extend(true, {}, this.defaults, opts, this.$wrapper.data('plugin-options'));
+
+                return this;
+            },
+
+            build: function() {
+                if (!this.options.stickyEnableOnBoxed && $('body').hasClass('boxed') || !this.options.stickyEnabled) {
+                    return false;
+                }
+
+                var self = this,
+                    $body = $('body'),
+                    $header = self.$wrapper,
+                    $headerContainer = $header.parent(),
+                    $headerNavItems = $header.find('ul.nav-main > li > a'),
+                    $logoWrapper = $header.find('.logo'),
+                    $logo = $logoWrapper.find('img'),
+                    logoWidth = $logo.attr('width'),
+                    logoHeight = $logo.attr('height'),
+                    logoPaddingTop = parseInt($logo.attr('data-sticky-padding') ? $logo.attr('data-sticky-padding') : self.options.logoPaddingTop),
+                    logoSmallWidth = parseInt($logo.attr('data-sticky-width') ? $logo.attr('data-sticky-width') : self.options.logoSmallWidth),
+                    logoSmallHeight = parseInt($logo.attr('data-sticky-height') ? $logo.attr('data-sticky-height') : self.options.logoSmallHeight),
+                    headerHeight = $header.height();
+
+                if (this.options.menuAfterHeader) {
+                    $headerContainer.css('min-height', $header.height());
+                }
+
+                $(window).afterResize(function() {
+                    $headerContainer.css('min-height', $header.height());
+                });
+
+                self.checkStickyMenu = function() {
+
+                    if ((!self.options.stickyEnableOnBoxed && $body.hasClass('boxed')) || ($(window).width() < 991 && !self.options.stickyEnableOnMobile)) {
+                        self.stickyMenuDeactivate();
+                        $header.removeClass('fixed')
+                        return false;
+                    }
+
+                    // Menu After Header
+                    if (!this.options.menuAfterHeader) {
+
+                        if ($(window).scrollTop() > ((headerHeight - 15) - logoSmallHeight)) {
+                            self.stickyMenuActivate();
+                        } else {
+                            self.stickyMenuDeactivate();
+                        }
+
+                    } else {
+
+                        if ($(window).scrollTop() > $headerContainer.offset().top) {
+                            $header.addClass('fixed');
+                        } else {
+                            $header.removeClass('fixed');
+                        }
+
+                    }
+
+                }
+
+                self.stickyMenuActivate = function() {
+
+                    if ($body.hasClass('sticky-menu-active')) {
+                        return false;
+                    }
+
+                    $logo.stop(true, true);
+
+                    $body.addClass('sticky-menu-active').removeClass('sticky-menu-deactive').css('padding-top', headerHeight);
+
+                    // Flat Menu Items
+                    if ($header.hasClass('flat-menu')) {
+                        $headerNavItems.addClass('sticky-menu-active');
+                    }
+
+                    $logoWrapper.addClass('logo-sticky-active');
+
+                    $logo.animate({
+                        width: logoSmallWidth,
+                        height: logoSmallHeight,
+                        top: logoPaddingTop + 'px'
+                    }, 200, function() {
+                        $.event.trigger({
+                            type: "stickyMenu.active"
+                        });
+                    });
+
+                }
+
+                self.stickyMenuDeactivate = function() {
+
+                    if ($body.hasClass('sticky-menu-active')) {
+
+                        $body.removeClass('sticky-menu-active').addClass('sticky-menu-deactive').css('padding-top', 0);
+
+                        // Flat Menu Items
+                        if ($header.hasClass('flat-menu')) {
+                            $headerNavItems.removeClass('sticky-menu-active');
+                        }
+
+                        $logoWrapper.removeClass('logo-sticky-active');
+
+                        $logo.animate({
+                            width: logoWidth,
+                            height: logoHeight,
+                            top: '0px'
+                        }, 200, function() {
+                            $.event.trigger({
+                                type: "stickyMenu.deactive"
+                            });
+                        });
+
+                    }
+
+                }
+
+                $body.addClass('sticky-menu-deactive');
+
+                self.checkStickyMenu();
+
+                return this;
+            },
+
+            events: function() {
+                var self = this;
+
+                $(window).on('scroll resize', function() {
+                    self.checkStickyMenu();
+                });
+            }
+
+        }
+
+    });
+
+}).apply(this, [window.theme, jQuery]);

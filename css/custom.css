@@ -10,3 +10,21 @@ p {
 section.toggle > label + p {
     color: #424242;
 }
+
+div.home-intro p {
+    padding-top: 17px;
+}
+section.page-top.custom-product {
+    background-image: url(/img/slide-bg.jpg);
+}
+
+.page-top.custom-product img {
+    bottom: 0;
+}
+.pricing-table h3 {
+    margin-bottom: 15px;
+}
+.pricing-table h3 span {
+    border: 0;
+    border-radius: 0;
+}
