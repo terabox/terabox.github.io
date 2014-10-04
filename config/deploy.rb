@@ -20,7 +20,7 @@ namespace :deploy do
   desc 'Restart application'
   task :restart do
     on roles(:app), in: :sequence, wait: 5 do
-      execute "cd #{current_path} && jekyll build"
+      execute "cd #{current_path} && bundle && bundle exec jekyll build"
     end
   end
 
