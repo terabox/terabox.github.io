@@ -265,7 +265,7 @@ ul.nav-list.primary > li a {
     -webkit-transition: all 0.3s;
     -moz-transition: all 0.3s;
     transition: all 0.3s;
-    background-image: url(../img/list-primary.png);
+    background-image: url(../../img/list-primary.png);
     background-position: 9px 16px;
     background-repeat: no-repeat;
     border-bottom: 1px solid #EDEDDE;
@@ -2283,7 +2283,7 @@ ul.social-icons li {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    background-image: url(../img/social-sprites.png);
+    background-image: url(../../img/social-sprites.png);
     background-repeat: no-repeat;
     background-position: 0 100px;
     display: inline-block;
@@ -2582,7 +2582,7 @@ ul.social-icons li.vk:hover {
 
 /* Arrows */
 .arrow {
-    background: transparent url(../img/arrows.png) no-repeat 0 0;
+    background: transparent url(../../img/arrows.png) no-repeat 0 0;
     width: 47px;
     height: 120px;
     display: inline-block;
@@ -2991,7 +2991,7 @@ ul.history li p {
 }
 
 ul.history li .thumb {
-    background: transparent url(../img/history-thumb.png) no-repeat 0 0;
+    background: transparent url(../../img/history-thumb.png) no-repeat 0 0;
     width: 227px;
     height: 160px;
     margin: 0 0 30px;

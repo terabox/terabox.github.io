@@ -1,0 +1,19 @@
+/*
+ *= require bootstrap
+ *= require font-awesome
+ *= require theme
+ *= require theme-elements
+ *= require theme-animate
+ *= require theme-blog
+ *= require skins/blue
+ *= require custom
+ */
+
+/*<link rel="stylesheet" href="{{ "/css/bootstrap.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/font-awesome.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/theme.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/theme-elements.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/theme-animate.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/theme-blog.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/skins/blue.css" | prepend: site.baseurl }}">*/
+/*<link rel="stylesheet" href="{{ "/css/custom.css" | prepend: site.baseurl }}">*/

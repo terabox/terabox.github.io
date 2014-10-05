@@ -1420,7 +1420,7 @@ section.featured.footer {
 }
 
 section.featured.map {
-    background-image: url(../img/map-bottom.png);
+    background-image: url(../../img/map-bottom.png);
     background-position: center 0;
     background-repeat: no-repeat;
     margin-top: 0;
@@ -1777,7 +1777,7 @@ aside ul.nav-list > li > a {
 }
 /* Home Concept */
 .home-concept {
-    background: transparent url(../img/home-concept.png) no-repeat center 0;
+    background: transparent url(../../img/home-concept.png) no-repeat center 0;
     width: 100%;
     overflow: hidden;
 }
@@ -1796,7 +1796,7 @@ aside ul.nav-list > li > a {
 }
 
 .home-concept .process-image {
-    background: transparent url(../img/home-concept-item.png) no-repeat 0 0;
+    background: transparent url(../../img/home-concept-item.png) no-repeat 0 0;
     width: 160px;
     height: 175px;
     margin: 135px auto 0 auto;
@@ -1816,7 +1816,7 @@ aside ul.nav-list > li > a {
 }
 
 .home-concept .project-image {
-    background: transparent url(../img/home-concept-item.png) no-repeat 100% 0;
+    background: transparent url(../../img/home-concept-item.png) no-repeat 100% 0;
     width: 350px;
     height: 420px;
     margin: 15px 0 0 -30px;
@@ -1826,7 +1826,7 @@ aside ul.nav-list > li > a {
 }
 
 .home-concept .sun {
-    background: transparent url(../img/home-concept-icons.png) no-repeat 0 0;
+    background: transparent url(../../img/home-concept-icons.png) no-repeat 0 0;
     width: 60px;
     height: 56px;
     display: block;
@@ -1836,7 +1836,7 @@ aside ul.nav-list > li > a {
 }
 
 .home-concept .cloud {
-    background: transparent url(../img/home-concept-icons.png) no-repeat 100% 0;
+    background: transparent url(../../img/home-concept-icons.png) no-repeat 100% 0;
     width: 116px;
     height: 56px;
     display: block;
