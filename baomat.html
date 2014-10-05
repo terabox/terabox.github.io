@@ -1,67 +1,10 @@
 ---
 layout: default
+title: TeraBackup - Cơ chế bảo mật
+permalink: /co-che-bao-mat/
 ---
 
-<div class="header-container" style="min-height: 79px;">
-    <header class="narrow" data-after-header="">
-        <div class="container">
-            <h1 class="logo">
-                <a href="index.html">
-                    <img alt="Porto" style="height: 72px;width: 148px;" src="/img/logo.png">
-                </a>
-            </h1>
-            <button class="btn btn-responsive-nav btn-inverse" data-toggle="collapse" data-target=".nav-main-collapse">
-                <i class="icon icon-bars"></i>
-            </button>
-        </div>
-        <div class="navbar-collapse nav-main-collapse collapse">
-            <div class="container">
-                <div class="social-icons">
-                    <ul class="social-icons">
-                        <li class="facebook"><a href="http://www.facebook.com/" target="_blank" title="Facebook">Facebook</a>
-                        </li>
-                        <li class="twitter"><a href="http://www.twitter.com/" target="_blank"
-                                               title="Twitter">Twitter</a></li>
-                        <li class="linkedin"><a href="http://www.linkedin.com/" target="_blank" title="Linkedin">Linkedin</a>
-                        </li>
-                    </ul>
-                </div>
-                <nav class="nav-main mega-menu">
-                    <ul class="nav nav-pills nav-main" id="mainMenu">
-                        <li>
-                            <a href="/">
-                                Trang Chủ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Tính Năng
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/pricing">
-                                Bảng Giá
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="#">
-                                Hỗ Trợ
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                Liên Hệ
-                            </a>
-                        </li>
-
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-</div>
+{% include menu.html %}
 
 <div role="main" class="main">
     <section class="page-top">
@@ -70,13 +13,13 @@ layout: default
                 <div class="col-md-12">
                     <ul class="breadcrumb">
                         <li><a href="index.html">Trang Chủ</a></li>
-                        <li class="active">Bảo mật</li>
+                        <li class="active">Cơ chế Bảo mật</li>
                     </ul>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <h2>Bảo mật Dịch vụ</h2>
+                    <h2>Cơ chế Bảo mật</h2>
                 </div>
             </div>
         </div>
@@ -87,23 +30,49 @@ layout: default
                 <div class="feature-box-info">
                     <h4 class="shorter">Dữ liệu của bạn được mã hóa trước khi ra khỏi máy</h4>
 
-                    <p class="tall">Phần mềm BackupBox không chỉ hỗ trợ sao lưu và phục hồi dữ liệu mà còn tự động mã
+                    <p class="tall">Phần mềm TeraBackup không chỉ hỗ trợ sao lưu và phục hồi dữ liệu mà còn tự động mã
                         hóa dữ liệu 256-bit AES ngay tại site của của bạn trước khi truyền ra Internet và lưu tại Trung
-                        tâm dữ liệu của BackupBox. Cơ chế MÃ HÓA MỘT CHIỀU nghĩa là KEY MÃ HÓA chỉ lưu tại site của
-                        người dùng nên dữ liệu được bảo mật thậm chí ngay với cả Nhà cung cấp dịch vụ (BackupBox) và chỉ
+                        tâm dữ liệu của TeraBackup. Cơ chế MÃ HÓA MỘT CHIỀU nghĩa là KEY MÃ HÓA chỉ lưu tại site của
+                        người dùng nên dữ liệu được bảo mật thậm chí ngay với cả Nhà cung cấp dịch vụ (TeraBackup) và
+                        chỉ
                         có bạn là người giữ KEY MÃ HÓA mới có thể phục hồi lại được dữ liệu của mình.</p>
                 </div>
             </div>
             <div class="col-md-5">
-                <div class="featured-box featured-box-primary" style="height: 343px;">
-                    <div class="box-content">
-                        <h4>Mã hóa 256-bit AES</h4>
-                        <p>AES (Advanced Encryption Standard hay Tiêu chuẩn mã hóa tiên tiến) là thuật toán mã hóa khối được chấp thuận làm tiêu chuẩn liên bang bởi Viện tiêu chuẩn và Công nghệ Quốc gia Hoa Kỳ (NIST) sau một quá trình tiêu chuẩn hóa kéo dài 5 năm và được chính phủ Hoa Kỳ áp dụng làm tiêu chuẩn mã hóa cho thông tin mật:
+                <div class="toggle" data-plugin-toggle data-plugin-options='{ "isAccordion": true }'>
+                    <section class="toggle active">
+                        <label>Mã hóa 256-bit AES là gì?</label>
 
-                            "Thiết kế và độ dài khóa của thuật toán AES (128, 192 và 256 bít) là đủ an toàn để bảo vệ các thông tin được xếp vào loại TỐI MẬT (secret). Các thông tin TUYỆT MẬT (top secret) sẽ phải dùng khóa 192 hoặc 256 bít. Các phiên bản thực hiện AES nhằm mục đích bảo vệ hệ thống an ninh hay thông tin quốc gia phải được NSA kiểm tra và chứng nhận trước khi sử dụng.</p>
-                    </div>
+                        <div class="toggle-content">
+                            <p>
+                                AES (Advanced Encryption Standard hay Tiêu chuẩn mã hóa tiên tiến) là thuật toán mã hóa
+                                khối được chấp thuận làm tiêu chuẩn liên bang bởi Viện tiêu chuẩn và Công nghệ Quốc gia
+                                Hoa Kỳ (NIST) sau một quá trình tiêu chuẩn hóa kéo dài 5 năm và được chính phủ Hoa Kỳ áp
+                                dụng làm tiêu chuẩn mã hóa cho thông tin mật:
+                            </p>
+
+                            <p>
+                                Thiết kế và độ dài khóa của thuật toán AES (128, 192 và 256 bit) là đủ an toàn để bảo vệ
+                                các thông tin được xếp vào loại TỐI MẬT (secret). Các thông tin TUYỆT MẬT (top secret)
+                                sẽ phải dùng khóa 192 hoặc 256 bít. Các phiên bản thực hiện AES nhằm mục đích bảo vệ hệ
+                                thống an ninh hay thông tin quốc gia phải được NSA kiểm tra và chứng nhận trước khi sử
+                                dụng.
+                            </p>
+                        </div>
+                    </section>
+                    <section class="toggle">
+                        <label>Tôi phải làm sao khi quên khóa mã hóa của mình?</label>
+
+                        <div class="toggle-content">
+                            <p>
+                                Nếu bạn quên khóa mã hóa của mình và cũng không lưu nó lại ở bất cứ chỗ nào khác thì
+                                việc phục hồi khóa mã hóa cũng như dữ liệu là KHÔNG THỂ DIỄN RA. Vì AES là cơ chế mã hóa
+                                một chiều, khóa không lưu trên máy chủ của TeraBackup nên ngay cả nhà cung cấp dịch vụ
+                                cũng không thể giúp bạn trong trường hợp này.
+                            </p>
+                        </div>
+                    </section>
                 </div>
-
             </div>
         </div>
         <hr/>
@@ -111,33 +80,44 @@ layout: default
             <div class="col-md-4">
                 <div class="feature-box">
                     <div class="feature-box-icon">
-                        <i class="icon icon-group"></i>
+                        <i class="fa fa-lock"></i>
+                    </div>
+                    <div class="feature-box-info">
+                        <h4 class="shorter">Hạn chế cho phép phục hồi bằng cơ chế lọc địa chỉ IP</h4>
+
+                        <p class="tall">TeraBackup cho phép người dùng bảo mật bằng cơ chế lọc địa chỉ IP. Bằng cách giới hạn truy cập vào tài khoản của bạn từ một số các địa
+                            chỉ IP xác định, phương pháp này giúp ngăn chặn việc dữ liệu bị phục hồi tại nơi khác nếu
+                            không may bị lộ thông tin tài khoản và KEY MÃ HÓA.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-box">
+                    <div class="feature-box-icon">
+                        <i class="fa fa-lock"></i>
                     </div>
                     <div class="feature-box-info">
                         <h4 class="shorter">Bảo mật giao tiếp Client – Server với kênh truyền SSL</h4>
-                        <p class="tall">Không chỉ mã hóa dữ liệu, BackBox hỗ trợ mã hóa đường truyền SSL nhằm bảo mật các thông tin giao tiếp giữa Client (người dùng) và Server (Trung tâm dữ liệu của Backupbox).</p>
+
+                        <p class="tall">Không chỉ mã hóa dữ liệu, TeraBackup hỗ trợ mã hóa đường truyền SSL nhằm bảo mật
+                            các thông tin giao tiếp giữa Client (người dùng) và Server (Trung tâm dữ liệu của
+                            TeraBackup).</p>
                     </div>
                 </div>
             </div>
+
             <div class="col-md-4">
                 <div class="feature-box">
                     <div class="feature-box-icon">
-                        <i class="icon icon-film"></i>
-                    </div>
-                    <div class="feature-box-info">
-                        <h4 class="shorter">Hạn chế truy cập không được phép bằng cơ chế lọc địa chỉ IP</h4>
-                        <p class="tall">Ngoài việc sử dụng mã hóa dữ liệu và kênh truyền SSL, BackupBox còn cho phép người dùng bảo mật bằng cơ chế lọc địa chỉ IP. Chỉ cần liên hệ với nhà cung cấp dịch vụ (BackupBox), bạn có thể chỉ cho phép việc truy cập vào tài khoản của mình từ một số các địa chỉ IP xác định. Phương pháp này sẽ giúp ngăn chặn việc dữ liệu bị phục hồi tại nơi khác nếu không may bị lộ thông tin tài khoản và KEY MÃ HÓA.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="feature-box">
-                    <div class="feature-box-icon">
-                        <i class="icon icon-bars"></i>
+                        <i class="fa fa-lock"></i>
                     </div>
                     <div class="feature-box-info">
                         <h4 class="shorter">Bảo mật ở mức hạ tầng và Trung tâm dữ liệu</h4>
-                        <p class="tall">Hệ thống của BackupBox được xây dựng đảm bảo các tính năng sẵn sàng và bảo mật nghiêm ngặt. Trung tâm dữ liệu của BackupBox đạt tiêu chuẩn Tier 3 với hệ thống camera, tủ rack được giám sát bởi các nhân viên an ninh 24/7 để ngăn chặn xâm phạm ở mức phần cứng bởi con người.</p>
+
+                        <p class="tall">Hệ thống của TeraBackup được xây dựng đảm bảo các tính năng sẵn sàng và bảo mật
+                            nghiêm ngặt. Trung tâm dữ liệu của BackupBox đạt tiêu chuẩn Tier 3 với hệ thống camera, tủ
+                            rack được giám sát bởi các nhân viên an ninh 24/7 để ngăn chặn xâm phạm ở mức phần cứng bởi
+                            con người.</p>
                     </div>
                 </div>
             </div>
