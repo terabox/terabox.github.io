@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bea4076-e6e2-4dbc-a435-a3b66c66d496" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/baomat.html" afterPath="$PROJECT_DIR$/baomat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/header.html" afterPath="$PROJECT_DIR$/_includes/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tinhnang.html" afterPath="$PROJECT_DIR$/tinhnang.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sla.html" afterPath="$PROJECT_DIR$/sla.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="terabox.iws" />
@@ -30,12 +26,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2857143" vertical-offset="0" max-vertical-offset="396">
+            <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="396">
               <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="sla.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sla.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.37278107" vertical-offset="2466" max-vertical-offset="5040">
+              <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+              <folding>
+                <element signature="tag#p#0;tag#div#0;tag#div#0" expanded="false" />
+                <element signature="tag#p#1;tag#div#0;tag#div#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,16 +54,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="39" max-vertical-offset="792">
               <caret line="17" column="20" selection-start-line="17" selection-start-column="20" selection-end-line="17" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="menu.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_includes/menu.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1260">
-              <caret line="41" column="68" selection-start-line="41" selection-start-column="68" selection-end-line="41" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -165,7 +164,6 @@
         <option value="$PROJECT_DIR$/_assets/javascripts/all.js" />
         <option value="$PROJECT_DIR$/_includes/head.html" />
         <option value="$PROJECT_DIR$/sla.md" />
-        <option value="$PROJECT_DIR$/sla.html" />
         <option value="$PROJECT_DIR$/pricing.html" />
         <option value="$PROJECT_DIR$/contact.html" />
         <option value="$PROJECT_DIR$/tos.html" />
@@ -179,6 +177,7 @@
         <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/tinhnang.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
+        <option value="$PROJECT_DIR$/sla.html" />
       </list>
     </option>
   </component>
@@ -433,7 +432,11 @@
       <created>1412440710739</created>
       <updated>1412440710739</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="update">
+      <created>1412477290056</created>
+      <updated>1412477290056</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -443,6 +446,7 @@
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972136" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -452,7 +456,6 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -724,16 +727,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sla.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.586207" vertical-offset="270" max-vertical-offset="5040">
-          <caret line="24" column="10" selection-start-line="5" selection-start-column="0" selection-end-line="24" selection-end-column="10" />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tos.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3333334" vertical-offset="0" max-vertical-offset="594">
@@ -825,10 +818,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2857143" vertical-offset="0" max-vertical-offset="396">
+        <state vertical-scroll-proportion="0.0" vertical-offset="14" max-vertical-offset="396">
           <caret line="6" column="18" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sla.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37278107" vertical-offset="2466" max-vertical-offset="5040">
+          <caret line="155" column="32" selection-start-line="155" selection-start-column="32" selection-end-line="155" selection-end-column="32" />
+          <folding>
+            <element signature="tag#p#0;tag#div#0;tag#div#0" expanded="false" />
+            <element signature="tag#p#1;tag#div#0;tag#div#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>
