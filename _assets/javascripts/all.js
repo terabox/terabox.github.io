@@ -1,5 +1,8 @@
 //= require vendor/modernizr
 //= require vendor/jquery
+//= require vendor/jquery.easing
+//= require vendor/jquery.appear
+//= require vendor/jquery.cookie
 //= require vendor/bootstrap
 //= require plugins
 //= require views/view.home
