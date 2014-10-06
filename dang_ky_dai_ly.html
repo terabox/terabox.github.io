@@ -1,0 +1,112 @@
+---
+layout: default
+title: TeraBackup - Đăng ký tham gia chương trình đại lý
+permalink: /dang-ky-chuong-trinh-dai-ly/
+---
+
+{% include menu.html %}
+
+<div role="main" class="main">
+    <section class="page-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ul class="breadcrumb">
+                        <li><a href="{{site.url}}">Trang Chủ</a></li>
+                        <li class="active">Đăng ký chương trình đại lý</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Đăng ký chương trình đại lý</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-lg-7">
+
+                <p>Để tham gia chương trình đại lý, vui lòng điền đầy đủ các thông tin sau:<p>
+                <script type="text/javascript">var submitted = false;</script>
+                <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted)
+                 {window.location='{{site.url}}/dang-ky-dai-ly-thanh-cong';}" style="display: none;"></iframe>
+                <form id="contactForm" action="https://docs.google.com/forms/d/1OLw-VEiHSlZHy0f08-rxQihd7vt5tBB2Nl78veEm0hg/formResponse" method="POST" enctype="multipart/form-data" data-type="advanced" novalidate="novalidate" onsubmit="submitted=true;" target="hidden_iframe">
+                    <input type="hidden" value="true" name="emailSent" id="emailSent">
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Họ và tên *</label>
+                                <input type="text" name="entry.552073069" value="" class="form-control required" id="entry_552073069" dir="auto" aria-label="Họ và Tên  " aria-required="true" required="" title="">
+                                <!--<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">-->
+                            </div>
+                            <div class="col-md-6">
+                                <label>Email *</label>
+                                <input type="text" name="entry.92913357" value="" class="form-control" id="entry_92913357" dir="auto" aria-label="Công ty  " title="">
+                                <!--<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Công Ty *</label>
+                                <input type="text" name="entry.238711433" value="" class="form-control" id="entry_238711433" dir="auto" aria-label="Địa chỉ  " title="">                                <!--<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-12">
+                                <label>Địa Chỉ *</label>
+                                <input type="text" name="entry.337808685" value="" class="form-control" id="entry_337808685" dir="auto" aria-label="Điện thoại  " title="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group">
+                            <div class="col-md-6">
+                                <label>Điện Thoại *</label>
+                                <input type="text" name="entry.1432272028" value="" class="form-control" id="entry_1432272028" dir="auto" aria-label="Email  " title="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="center">
+                                <input type="submit" id="contactFormSubmit" value="Đăng Ký Đại Lý" class="btn btn-primary btn-lg" data-loading-text="Đang xử lý">
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" name="draftResponse" value="[,,'-8856316997117763346']">
+                    <input type="hidden" name="pageHistory" value="0">
+                    <input type="hidden" name="fbzx" value="-8856316997117763346">
+                </form>
+
+            </div>
+            <div class="col-md-5 col-lg-5">
+                <h2 class="word-rotator-title">
+                    Hợp tác cùng <strong>
+							<span class="word-rotate active" >
+								<span class="word-rotate-items">
+									<span>phát triển.</span>
+									<span>thành công.</span>
+                                </span>
+							</span>
+                </strong>
+                </h2>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    $('#contactFormSubmit').click(function () {
+        var btn = $(this)
+        btn.button('loading')
+    });
+</script>

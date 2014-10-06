@@ -12,7 +12,7 @@ permalink: /lien-he/
             <div class="row">
                 <div class="col-md-12">
                     <ul class="breadcrumb">
-                        <li><a href="index.html">Trang Chủ</a></li>
+                        <li><a href="{{site.url}}">Trang Chủ</a></li>
                         <li class="active">Liên hệ</li>
                     </ul>
                 </div>
@@ -32,17 +32,23 @@ permalink: /lien-he/
 
 
                 <h2 class="short"><strong>Liên hệ</strong> TeraBackup</h2>
-                <form id="contactForm" action="contact-us-advanced.php#contact-sent" method="POST" enctype="multipart/form-data" data-type="advanced" novalidate="novalidate">
+                <p>Vui lòng điền đầy đủ nội dung thông tin liên hệ. Chúng tôi sẽ phản hồi cho bạn trong thời gian sớm nhất.</p>
+
+                <hr>
+                <script type="text/javascript">var submitted = false;</script>
+                <iframe id="hidden_iframe" name="hidden_iframe" onload="if(submitted)
+                 {window.location='{{site.url}}/lien-he-thanh-cong';}" style="display: none;"></iframe>
+                <form id="contactForm" action="https://docs.google.com/forms/d/1vEZ2ofKxySgD0GrMJlluZzEe3YlKIuJRvJN4LRVtzAQ/formResponse" method="POST" enctype="multipart/form-data" data-type="advanced" novalidate="novalidate" onsubmit="submitted=true;" target="hidden_iframe">
                     <input type="hidden" value="true" name="emailSent" id="emailSent">
                     <div class="row">
                         <div class="form-group">
                             <div class="col-md-6">
                                 <label>Họ và tên *</label>
-                                <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name" id="name">
+                                <input type="text" name="entry.892324175" value="" class="form-control required" id="entry_892324175" dir="auto" aria-label="Họ và Tên" aria-required="true" required="" title="">
                             </div>
                             <div class="col-md-6">
                                 <label>Email *</label>
-                                <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="email">
+                                <input type="text" name="entry.1256252499" value="" class="form-control" id="entry_1256252499" dir="auto" aria-label="Email  " aria-required="true" required="" title="">
                             </div>
                         </div>
                     </div>
@@ -50,29 +56,27 @@ permalink: /lien-he/
                         <div class="form-group">
                             <div class="col-md-12">
                                 <label>Nội dung *</label>
-                                <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
+                                <textarea name="entry.378881804" rows="8" cols="0" class="form-control" id="entry_378881804" dir="auto" aria-label="Nội dung" aria-required="true" required=""></textarea>
                             </div>
                         </div>
                     </div>
 
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="submit" id="contactFormSubmit" value="Gửi liên hệ" class="btn btn-primary btn-lg pull-right" data-loading-text="Loading...">
+                            <input type="submit" id="contactFormSubmit" value="Gửi liên hệ" class="btn btn-primary btn-lg pull-right" data-loading-text="Đang xử lý">
                         </div>
                     </div>
+                    <input type="hidden" name="draftResponse" value="[,,'5931752290109447516']">
+                    <input type="hidden" name="pageHistory" value="0">
+                    <input type="hidden" name="fbzx" value="5931752290109447516">
                 </form>
             </div>
             <div class="col-md-6">
-
-                <p>Vui lòng điền đầy đủ nội dung thông tin liên hệ. Chúng tôi sẽ phản hồi cho bạn trong thời gian sớm nhất.</p>
-
-                <hr>
-
                 <h4><strong>Trụ Sở Chính</strong></h4>
                 <ul class="list-unstyled">
-                    <li><i class="icon icon-map-marker"></i> <strong>Địa Chỉ:</strong> 27, Hoa Đào, Phường 2, Phú Nhuận, TPHCM</li>
-                    <li><i class="icon icon-phone"></i> <strong>Phone:</strong> 1800.xxxx</li>
-                    <li><i class="icon icon-envelope"></i> <strong>Email:</strong> <a href="mailto:contact@terabox.vn">contact@terabox.vn</a></li>
+                    <li><i class="fa fa-map-marker"></i> 27, Hoa Đào, Phường 2, Phú Nhuận, TPHCM</li>
+                    <li><i class="fa fa-phone"></i> (08)35 174 900</li>
+                    <li><i class="fa fa-envelope"></i> <a href="mailto:contact@terabox.vn">contact@terabox.vn</a></li>
                 </ul>
 
                 <hr>
