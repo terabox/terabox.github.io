@@ -3,8 +3,8 @@ title: TeraBackup - Dịch vụ sao lưu dữ liệu trực tuyến - Online Dat
 email: contact@terabox.vn
 description: "Dịch vụ sao lưu trực tuyền TeraBackup"
 baseurl: ""
-url: "http://localhost:4000"
-#url: "http://beta.terabox.vn"
+#url: "http://localhost:4000"
+url: "http://www.terabox.vn"
 
 # Build settings
 permalink: pretty
