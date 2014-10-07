@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bea4076-e6e2-4dbc-a435-a3b66c66d496" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/img/reseller-program.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/daily.html" afterPath="$PROJECT_DIR$/daily.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dang_ky_dai_ly.html" afterPath="$PROJECT_DIR$/dang_ky_dai_ly.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/Business.png" afterPath="$PROJECT_DIR$/img/Business.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="terabox.iws" />
@@ -31,8 +29,8 @@
       <file leaf-file-name="_config.yml" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24867725" vertical-offset="14" max-vertical-offset="396">
-              <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="396">
+              <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -51,7 +49,7 @@
       <file leaf-file-name="daily.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/daily.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.555555" vertical-offset="399" max-vertical-offset="1350">
+            <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1350">
               <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
               <folding />
             </state>
@@ -111,7 +109,7 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="8.925926" vertical-offset="3013" max-vertical-offset="3726">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3013" max-vertical-offset="3726">
               <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
               <folding />
             </state>
@@ -121,7 +119,7 @@
       <file leaf-file-name="dang_ky_dai_ly.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/dang_ky_dai_ly.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4074073" vertical-offset="1663" max-vertical-offset="2106">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1663" max-vertical-offset="2106">
               <caret line="99" column="76" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="76" />
               <folding />
             </state>
@@ -461,7 +459,11 @@
       <created>1412588231701</created>
       <updated>1412588231701</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="update">
+      <created>1412652869237</created>
+      <updated>1412652869237</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -469,7 +471,7 @@
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32972136" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2689394" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27348486" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32352942" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -774,7 +776,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="648">
           <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,7 +797,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="8.925926" vertical-offset="3013" max-vertical-offset="3726">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3013" max-vertical-offset="3726">
           <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
           <folding />
         </state>
@@ -839,7 +840,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dang_ky_dai_ly.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4074073" vertical-offset="1663" max-vertical-offset="2106">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1663" max-vertical-offset="2106">
           <caret line="99" column="76" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="76" />
           <folding />
         </state>
@@ -847,7 +848,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/daily.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.555555" vertical-offset="399" max-vertical-offset="1350">
+        <state vertical-scroll-proportion="0.0" vertical-offset="399" max-vertical-offset="1350">
           <caret line="50" column="22" selection-start-line="50" selection-start-column="22" selection-end-line="50" selection-end-column="22" />
           <folding />
         </state>
@@ -855,8 +856,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24867725" vertical-offset="14" max-vertical-offset="396">
-          <caret line="6" column="26" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.42857143" vertical-offset="0" max-vertical-offset="396">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
           <folding />
         </state>
       </provider>
