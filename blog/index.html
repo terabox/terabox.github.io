@@ -1,0 +1,44 @@
+---
+layout: blog
+---
+<div class="blog-posts">
+
+<section class="timeline">
+<div class="timeline-body">
+    {% for post in site.posts %}
+        <article class="timeline-box left post post-medium">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-image">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-content">
+                        <h4><a href="{{site.url}}{{ post.url }}">{{ post.title }}</a></h4>
+
+                        {{post.excerpt}}
+                    </div>
+
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="post-meta">
+                        <span><i class="fa fa-calendar"></i> {{post.date | date: "%-m-%d-%Y"}}</span><br>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <a href="{{site.url}}{{ post.url }}" class="btn btn-xs btn-primary pull-right">Xem thêm...</a>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+
+</section>
+
+</div>

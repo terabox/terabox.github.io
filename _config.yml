@@ -7,9 +7,7 @@ baseurl: ""
 #url: "http://localhost:4000"
 url: "http://www.terabox.vn"
 
-# Build settings
-permalink: pretty
-
+permalink: /blog/:title/
 gems:
   - jekyll-redirect-from
 

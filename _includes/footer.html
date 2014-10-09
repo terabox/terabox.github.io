@@ -25,8 +25,9 @@
                     <div class="col-md-4">
                         <h5>Blog</h5>
                         <ul class="list icons list-unstyled">
-                            <li><i class="fa fa-caret-right"></i> <a href="javascript: void(0);">Tại sao phải sử dụng dịch vụ Backup?</a></li>
-                            <li><i class="fa fa-caret-right"></i> <a href="javascript: void(0);">Dữ liệu của bạn quan trọng như thế nào?</a></li>
+                            {% for post in site.posts limit:3 %}
+                            <li><i class="fa fa-caret-right"></i> <a href="{{site.url}}{{post.url}}">{{post.title}}</a></li>
+                            {%endfor%}
                         </ul>
                     </div>
                     <div class="col-md-4">
@@ -77,3 +78,5 @@
     </div>
 </footer>
 {{ 'all' | javascript }}
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5396dd8765dae00d" async></script>
+
