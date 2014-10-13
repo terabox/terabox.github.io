@@ -1,6 +1,7 @@
 /* Add here all your CSS customizations */
 body {
     color: #424242;
+    font-family: Arial, sans-serif;
 }
 
 p {
@@ -36,4 +37,15 @@ h1.word-rotator-title {
 h2.word-rotate
 {
     margin-bottom: -12px;
+}
+
+.home-concept strong {
+    font-family: 'arial',sans-serif;
+}
+
+.lead {
+    font-weight: 400;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
 }
