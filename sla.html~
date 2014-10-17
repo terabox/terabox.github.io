@@ -1,0 +1,285 @@
+---
+layout: default
+permalink: /sla-cam-ket-dich-vu/
+title: TeraBackup - SLA - Cam kết dịch vụ
+---
+{% include menu.html %}
+        
+<div role="main" class="main">
+<section class="page-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <ul class="breadcrumb">
+                    <li><a href="{{site.url}}">Trang Chủ</a></li>
+                    <li class="active">Cam Kết Dịch Vụ</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <h2>Cam Kết Dịch Vụ</h2>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="container">
+<p>
+    Bản cam kết dịch vụ này chỉ áp dụng đối với khách hàng mua gói dịch vụ Personal hoặc/và Business của dịch vụ
+    Sao lưu và Phục hồi dữ liệu TeraBackup, được thực hiện giữa Công ty TNHH Công nghệ UCS (“UCS”, “TeraBackup,
+    “Chúng tôi”) và bạn (“Khách hàng”,”Người dùng”, “Bạn”).
+</p>
+
+<p>
+    Các điều khoản và điều kiện cam kết dịch vụ sau đây chỉ áp dụng cho khách hàng đồng ý sử dụng dịch vụ Sao
+    lưu và
+    Phục hồi dữ liệu TeraBackup mua gói cước Personal hoặc/và Business, với sự tôn trọng của việc cung cấp dịch
+    TeraBackup trong khoảng thời gian đó. Điều khoản và điều kiện này chỉ áp dụng khi khách hàng không vi phạm
+    các
+    cam kết sử dụng dịch vụ tại thỏa thuận sử dụng dịch vụ.
+</p>
+<ul class="list-unstyled">
+<li>
+    <h5>1. Cam kết chuẩn trung tâm dữ liệu</h5>
+
+    <p>
+        Các trung tâm dữ liệu của TeraBackup được xây dựng đạt chuẩn Tier 3+, đầy đủ các tiêu chuẩn hệ thống
+        UPS, máy nổ
+        dự phòng, nhiệt độ, phòng chống hỏa hoạn, hệ thống camera giám sát 24/7,… để đảm bảo hệ thống tránh
+        bị ảnh hưởng
+        bởi những nguyên nhân về an ninh và điều kiện môi trường.
+    </p>
+</li>
+<li>
+    <h5>2. Cam kết mức sẵn sàng dịch vụ</h5>
+
+    <p>
+        Mức sẵn sàng dịch vụ là tỉ lệ thời gian tối thiểu theo tháng hoặc năm mà dịch vụ TeraBackup hoạt
+        động liên tục
+        để Khách hàng có thể truy cập nhằm sao lưu và phục hồi dữ liệu.
+    </p>
+
+    <p>
+        Chúng tôi đảm bảo tính sẵn sàng dịch vụ TeraBackup là 99,9% thời gian tương đương với hệ thống
+        không sẵn sàng không quá 43,2 phút mỗi tháng (30 ngày) hay tương đương 8,64 giờ một năm và không bao gồm
+        thời gian định kỳ bảo trì hệ thống (mục 7).
+    </p>
+
+    <p>
+        Dịch vụ không được coi là không sẵn sàng nếu lỗi xảy ra trong những trường hợp miễn trừ đảm bảo (mục 6) và
+        trường hợp bất khả kháng (mục 8).
+    </p>
+</li>
+<li>
+    <h5>3. Cam kết phục hồi dữ liệu</h5>
+
+    <p>
+        Chúng tôi cam kết việc phục hồi có thể tiến hành phục hồi ngay lập tức qua kết nối Internet của
+        khách hàng tới máy chủ của dịch vụ trong trường hợp người dùng cần phục hồi dữ liệu.
+    </p>
+
+    <p>
+        Trong trường hợp dung lượng dữ liệu cần phục hồi lớn, khách hàng có thể yêu cầu phục hồi dữ liệu tại
+        vị trí của
+        mình. Dịch vụ TeraBackup sẽ chuyển toàn bộ dữ liệu cần phục hồi đến khách hàng bằng thiết bị lưu trữ
+        gắn ngoài.
+        Việc phục hồi dữ liệu của khách hàng sẽ được tiến hành phục hồi sau 8 giờ, không bao gồm thời gian
+        sao chép dữ
+        liệu của khách hàng ra thiết bị gắn ngoài và thời gian vận chuyển dữ liệu tới địa điểm của khách
+        hàng ( độ trễ
+        phụ thuộc vào dung lượng dữ liệu của khách hàng và khoảng cách địa lý của khách hàng và trung tâm dữ
+        liệu của
+        TeraBackup). Trong trường hợp đó, có thể sẽ phát sinh một khoản phí cho dịch vụ này, chi phí đó sẽ
+        được thỏa
+        thuận giữa khách hàng và TeraBackup trước khi thực hiện.
+    </p>
+
+    <p>
+        Tuy nhiên, TeraBackup cam kết sẽ nỗ lực hết sức, hỗ trợ người dùng khôi phục lại hệ thống để có thể
+        hoạt động
+        trở lại bình thường trong thời gian sớm nhất.
+    </p>
+</li>
+<li>
+    <h5>4. Cam kết bảo mật</h5>
+
+    <p>
+        TeraBackup chúng tôi luôn tôn trọng sự riêng tư của bạn, và đó là lý do chúng tôi luôn cam kết bảo
+        vệ những
+        thông tin cá nhân của bạn. Những thông tin được thu thập qua website được sử dụng chỉ nhằm mục đích
+        đánh giá nội
+        bộ và cải thiện nội dung website và không được cung cấp với bất kỳ tổ chức khác cho mục đích thương
+        mại. Ngoài
+        ra chúng tôi cũng không hợp tác hay có quan hệ đặc biệt với bất kỳ công ty quảng cáo nào.
+    </p>
+
+    <p>
+        Nhằm cung cấp cho khách hàng dịch vụ tốt nhất, chúng tôi có thể yêu cầu bạn cung cấp thông tin cá
+        nhân, bao gồm họ và tên, tên đăng nhập và mật khẩu, tên công ty ... Thông tin này chỉ sử dụng để xác thực và đảm
+        bảo những thông tin trong quá trình thanh toán. Bạn có thể hoàn toàn yên tâm là chúng tôi sẽ sử dụng tất cả
+        các biện pháp có thể để bảo vệ tất cả các thông tin mà bạn đã cung cấp cho TeraBackup.
+    </p>
+
+    <p>
+        TeraBackup cam kết sử dụng các biện pháp bảo mật theo tiêu chuẩn bao gồm việc mã hóa dữ liệu của
+        khách hàng
+        trước khi được truyền đi , mã hóa đường truyền và hệ thống được giám sát 24/7 để tránh các xâm phạm
+        từ con
+        người.
+
+    </p>
+
+    <p>
+        TeraBackup sẽ không công khai hoặc bán bất kỳ thông tin cá nhân cho các bên thứ ba, ngoại trừ theo
+        yêu cầu của
+        pháp luật. TeraBackup chỉ thu thập những thông tin cá nhân mà bạn tự nguyện gửi như tên, địa chỉ,
+        thông tin liên
+        lạc hay các thông tin khác mà bạn chọn để cung cấp trên website TeraBackup. Với việc cung cấp các
+        thông tin cá
+        nhân lên website TeraBackup, bạn đã đồng ý với việc thu thập và sử dụng thông tin theo qui định về
+        quyền riêng
+        tư này. 
+    </p>
+</li>
+<li>
+    <h5>5. Cam kết hỗ trợ</h5>
+
+    <p>
+        Khi gặp sự cố, xin hãy thông báo ngay tới bộ phận Hỗ trợ của TeraBackup qua các kênh sau:
+    </p>
+    <ul>
+        <li>Email: support@terabox.vn</li>
+        <li>Hotline: 1800.1240</li>
+    </ul>
+
+    <p>
+        Mọi yêu cầu hỗ trợ của khách hàng ,TeraBackup cam kết sẽ phản hồi sơm nhất và không vượt quá 4 giờ
+        nếu trong
+        giờ hành chính (8h – 17h từ thứ Hai đến thứ Sáu, không bao gồm nghỉ lễ) và 8 giờ ngoài giờ hành
+        chính kể từ khi
+        nhận được email yêu cầu hỗ trợ từ phía khách hàng.
+    </p>
+
+    <p>
+        Trong trường hợp khẩn cấp, xin khách hàng vui lòng liên hệ thông qua số Hotline của dịch vụ để nhận
+        được sự hỗ
+        trợ ngay lập tức từ TeraBackup.
+    </p>
+</li>
+<li>
+    <h5>6. Miễn trừ đảm bảo</h5>
+
+    <p>
+        TeraBackup sẽ không được coi là không đáp ứng thực hiện những đảm bảo đối với những trường hợp và
+        không giới hạn
+        từ những phát sinh sau:
+    </p>
+    <ul>
+        <li>
+            Những lỗi kết nối đường truyền của người dùng tới nhà cung cấp dịch vụ đường truyền hoặc
+            những nhà cung cấp
+            dịch vụ kết nối khác, ngoài tầm kiểm soát của TeraBackup mà ngăn chặn việc truy cập của khách
+            hàng tới hệ thống
+            TeraBackup;
+        </li>
+        <li>
+            Lỗi hoặc sơ suất của khách hàng trong quá trình sử dụng dịch vụ theo hợp đồng;
+        </li>
+        <li>
+            Người dùng cấu hình lại phần mềm hoặc tùy chỉnh lại kịch bản hoặc mã hóa (ví dụ, kịch bản
+            dòng lệnh chạy
+            trước hoặc sau khi sao lưu) hoặc của người đại diện của người dùng;
+        </li>
+        <li>
+            Lỗi từ thiết bị phần cứng hoặc phần mềm của người dùng, hoặc bất kỳ phần cứng hoặc phần mềm
+            khác cài đặt trên
+            hoặc kết nối với máy tính người dùng hoặc máy chủ mà ngoài tầm kiểm soát của TeraBackup; hoặc
+        </li>
+        <li>
+            khách hàng không tuân thủ bất kỳ của các điều kiện quy định trong cam kết về Điều khoản và
+            Điều kiện sử dụng dịch vụ.
+        </li>
+    </ul>
+</li>
+<li>
+    <h5>7. Bảo trì định kỳ</h5>
+
+    <p>Bảo trì định kỳ có nghĩa là:</p>
+    <ul>
+        <li>
+            Bất kỳ bảo trì nào tại Trung tâm dữ liệu TeraBackup, và người dùng sẽ được thông báo trước 48 giờ qua
+            email
+            hoặc tin nhắn được đăng trên trang web TeraBackup.vn. Việc Bảo trì có thể được sắp xếp vào bất kỳ ngày
+            nào trong
+            tuần, bao gồm cả ngày nghỉ cuối tuần, và có thể tại bất kỳ thời gian nào trong ngày. Tuy vậy chúng tôi
+            sẽ nỗ lực
+            hết sức thực hiện bảo trì theo lịch ngoài giờ làm việc bình thường.
+        </li>
+        <li>
+            Bất kỳ bảo trì khẩn cấp nào tại Trung tâm dữ liệu TeraBackup không được thông báo cho người dùng trước,
+            nhưng
+            là hợp lý cần thiết để đảm bảo việc tiếp tục cung cấp Dịch vụ.
+        </li>
+    </ul>
+</li>
+<li>
+    <h5>8. Bất khả kháng</h5>
+
+    <p>
+        Không bên nào phải chịu trách nhiệm cho bất kỳ sự cố hoặc chậm trễ nào trong các trường hợp
+        sau:
+    </p>
+    <ul>
+        <li>
+            Trường hợp vượt quá tầm kiểm soát của TeraBackup bao gồm nhưng không giới hạn sự can thiệp của
+            các cơ quan Chính phủ, chiến tranh, nổi loạn, phá hoại, cấm vận, hỏa hoạn, động đất, lũ lụt,
+            đình công.
+        </li>
+        <li>
+            Gián đoạn hoặc chậm trễ bởi giao thông vận tải, gián đoạn hoặc chậm trễ trong viễn thông.
+        </li>
+        <li>Lỗi phần mềm, trách nhiệm của bên thứ ba.</li>
+        <li>Các vấn đề về DNS không nằm trong tầm kiểm soát của TeraBackup hoặc bất kỳ liên kết hoặc các kết
+            nối viễn thông khác tạo thành một phần của Internet mà không nằm dưới sự kiểm soát của TeraBackup.
+        </li>
+    </ul>
+</li>
+<li>
+    <h5>9. Đền bù vi phạm cam kết</h5>
+
+    <p>
+        Trong trường hợp TeraBackup không thực hiện đúng các cam kết nêu ra tại các mục 1,2,3,4,5 và các không nằm trong
+        các trường hợp loại trừ, khách hàng sẽ được đền bù theo các mức, tùy thuộc vào độ vi phạm của TeraBackup với các
+        cam kết trên. Cụ thể như sau:
+    </p>
+    <ul>
+        <li><strong>Vi phạm thời gian sẵn sàng dịch vụ: </strong> Nếu thời gian gián đoạn dịch vụ vượt quá 43.2 phút mỗi
+            tháng, chúng
+            tôi sẽ hoàn trả lại khách hàng phí dịch vụ của tháng đó theo các mức sẵn sàng sau:
+            <ul>
+                <li>
+                    Từ 99.9% trở lên: 0% phí dịch vụ trong tháng.
+                </li>
+                <li>Từ 99.5% - 99.9%: 20% phí dịch vụ trong tháng.</li>
+                <li>Từ 99% - 99.5 %: 40% phí dịch vụ trong tháng.</li>
+                <li>Từ 98.5% - 99%: 60% phí dịch vụ trong tháng.</li>
+                <li>Từ 98% - 98.5%: 80% phí dịch vụ trong tháng.</li>
+                <li>Dưới 98%: 100% phí dịch vụ trong tháng.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Vi phạm cam kết phục hồi dữ liệu:</strong> Trong trường hợp không thể được phục hồi trong vòng 8 giờ
+            kể từ lúc Khách hàng gửi yêu cầu, Khách hàng sẽ được hoàn trả 5% (năm phần trăm) phí dịch vụ của tháng cho
+            mỗi GB dữ liệu
+            không thể phục hồi, với mức tối đa 100% (một trăm phần trăm) phí dịch vụ của tháng xảy ra sự cố không thể
+            phục
+            hồi.
+        </li>
+    </ul>
+</li>
+
+</ul>
+
+
+</div>
+</div>
