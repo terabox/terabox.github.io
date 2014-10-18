@@ -2,6 +2,7 @@
 layout: post
 title:  "Mất dữ liệu 1 phút – Mất sự nghiệp cả đời!"
 date:   2014-09-24 10:31:30
+image: /img/data-loss-mat-du-lieu.jpg
 ---
 
 Thông tin này không phải để đe dọa bạn: Một nghiên cứu của Cục Quản lí Kho lưu trữ và Hồ sơ (Nation Archives and Records Administration) Mỹ phát hiện ra rằng, có đến 25% doanh nghiệp bị mất và không thể phục hồi được dữ liệu trong thời gian ngắn đã đi đến phá sản!  
