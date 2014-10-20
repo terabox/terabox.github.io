@@ -20,3 +20,8 @@ Dù hầu hết các công ty Việt Nam đều ý thức được dữ liệu l
 Là bạn, hoặc bên thứ 3!
 Tự bỏ ra khoản tiền lớn để đầu tư tất tần tật mọi thứ, tự sở hữu như các chuyên gia kinh gia kinh tế hay khuyến nghị rồi tự bảo quản, tự sửa chữa, tự xử lý đống phế liệu hư hỏng.  Hoặc đơn giản hơn là “gắp lửa bỏ tay người”, để cho công ty dịch vụ dữ liệu nào đó chịu hết những thủ tục trên cho bạn.
 Tùy bạn quyết định!
+
+**Nguồn tham khảo:**  
+ - “94% doanh nghiệp từng mất dữ liệu kinh doanh”, ICT News (2012)  
+ - “Lose your data, lose your business - What's behind door No. 3? Data replication is critical for disaster preparedness”, Network World (2009)  
+ - “Microsoft warns: Lose your data - Lose your business”, M2 Presswire (2003)  
