@@ -1,0 +1,22 @@
+- title: Tổng quan
+  docs:
+  - pro_intro
+  - pro_system_requirements
+- title: Cài đặt
+  docs:
+  - pro_installation
+  - pro_config
+- title: Sử dụng TeraBackup Pro
+  docs:
+  - pro_backup_restore
+  - pro_change_config
+  - pro_backupset
+  - pro_schedule
+  - pro_settings
+- title: Phụ lục
+  docs:
+  - pro_cdp
+  - pro_seed_loading
+  - pro_infile_delta
+  - pro_ssl
+  - pro_aes

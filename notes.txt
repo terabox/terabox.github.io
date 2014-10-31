@@ -1,0 +1,3 @@
+- Backup Loc => Bo loc
+- Backup Nguon => Nguon Backup
+- Nâng cao Backup Nguồn => Nguồn Backup nâng cao

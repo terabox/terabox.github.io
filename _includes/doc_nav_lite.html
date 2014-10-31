@@ -1,0 +1,14 @@
+
+{% for section in site.data.docs_lite %}
+<ul class="nav nav-pills nav-stacked">
+    <li class="nav-header disabled"><a>{{forloop.index + 1}}. {{ section.title }}</a></li>
+
+    {% for item in section.docs %}
+    {% for p in site.pages %}
+    {% if p.tag == item %}
+    <li><a href="{{p.url}}"><i class="fa fa-angle-right"></i> {{ p.doc_title }}</a></li>
+    {% endif %}
+    {% endfor %}
+    {% endfor %}
+</ul>
+{% endfor %}

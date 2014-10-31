@@ -1,0 +1,21 @@
+- title: Tổng quan
+  docs:
+  - lite_intro
+  - lite_system_requirements
+- title: Cài đặt
+  docs:
+  - lite_installation
+  - lite_config
+- title: Sử dụng TeraBackup Lite
+  docs:
+  - lite_backup_restore
+  - lite_change_config
+  - lite_backupset
+  - lite_schedule
+  - lite_settings
+- title: Phụ lục
+  docs:
+  - lite_filter
+  - lite_cdp
+  - lite_ssl
+  - lite_aes
