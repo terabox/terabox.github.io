@@ -6,7 +6,19 @@ tag: pro_settings
 doc_title: Thay đổi cấu hình Backup
 ---
 
-Cấu hình backup cung cấp một số thiết lập được TeraBackup Pro sử dụng trong quá trình sao lưu và phục hồi dữ liệu. Bạn thay đổi Backup Setting theo các bước sau:  
+Cấu hình backup cung cấp một số thiết lập được TeraBackup Pro sử dụng trong quá trình sao lưu và phục hồi dữ liệu. Bạn thay đổi Backup Setting theo các bước sau bằng hình ảnh hoặc bằng video hướng dẫn:
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/pVinFXRfXj0" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Từ giao diện **TeraBackup Pro**, truy cập Cấu hình backup bằng cách click vào biểu tượng ![Cài đặt TeraBackup Pro]({{site.url}}/img/terabackup-pro/28.png).
 

@@ -7,7 +7,19 @@ doc_title: Thay đổi các cấu hình
 ---
 #####Thông tin người dùng 
 
-Thông tin người dùng là các thông tin cá nhân của người dùng như mật khẩu, email,… Bạn thay đổi các thông tin trong **Thông tin người dùng** theo các bước sau:   
+Thông tin người dùng là các thông tin cá nhân của người dùng như mật khẩu, email,… Bạn thay đổi các thông tin trong **Thông tin người dùng** theo các bước sau bằng hình ảnh hoặc bằng video hướng dẫn:
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/h4590ZE2t4o" frameborder="0" allowfullscreen></iframe>   
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Từ giao diện **TeraBackup Pro**, truy cập **Thông tin người dùng** bằng cách click vào biểu tượng ![Cài đặt TeraBackup Pro]({{site.url}}/img/terabackup-pro/24.png). 
 

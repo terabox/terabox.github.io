@@ -6,7 +6,19 @@ tag: lite_config
 doc_title: Cấu hình
 ---
 
-Sau khi cài đặt TeraBackup Lite, bạn cần thực hiện một số bước cấu hình sau để có thể sử dụng: 
+Sau khi cài đặt TeraBackup Lite, bạn cần thực hiện một số bước cấu hình sau bằng hình ảnh hoặc bằng video hướng dẫn để có thể sử dụng: 
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/UCmRD7YE19A" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Click vào biểu tượng **TeraBackup Lite** trên màn hình Desktop hoặc trong Start Menu để chạy TeraBackup Lite. 
 2. Hộp thoại **Đăng ký thử nghiệm** xuất hiện. Trong mục **Backup Server**, bạn có thể chọn https thay cho http nhằm tăng tính bảo mật cho dữ liệu (Tham khảo Phụ lục – **Bảo mật dữ liệu**). Click **Tiếp** để tiếp tục.

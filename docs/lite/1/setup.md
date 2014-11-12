@@ -5,7 +5,19 @@ permalink: /docs/terabackup-lite/cai-dat/
 tag: lite_installation
 doc_title: Cài đặt
 ---
-Để có thể sao lưu dữ liệu về  bạn cần Setup và cấu hình phần mềm  TeraBackup Lite. Bạn tiến hành Setup qua các bước sau:  
+Để có thể sao lưu dữ liệu về  bạn cần Setup và cấu hình phần mềm  TeraBackup Lite. Bạn tiến hành Setup qua các bước sau bằng hình ảnh hoặc bằng video hướng dẫn:  
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/uy1mDNVlhJ4" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Download TeraBackup Lite tại: [https://www.terabox.vn/download-tai-phan-mem](https://www.terabox.vn/download-tai-phan-mem)        
 2. Chạy file TBL-win-vn.exe để bắt đầu quá trình Setup.  

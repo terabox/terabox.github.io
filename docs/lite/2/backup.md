@@ -6,8 +6,20 @@ tag: lite_backup_restore
 doc_title: Sao lưu/Phục hồi
 ---
 ####Sao lưu
-TeraBackup Lite hỗ trợ sao lưu tự động theo lịch (Schedule) và theo thời gian thực (Continuous Data Protection) nên hầu như bạn không cần thực hiện sao lưu thủ công. Nếu muốn sao lưu thủ công, bạn thực hiện như sau:
- 
+TeraBackup Lite hỗ trợ sao lưu tự động theo lịch (Schedule) và theo thời gian thực (Continuous Data Protection) nên hầu như bạn không cần thực hiện sao lưu thủ công. Nếu muốn sao lưu thủ công, bạn thực hiện như sau bằng hình ảnh hoặc bằng video hướng dẫn:
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/BrLyQ2fF-30" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
+
 1. Từ giao diện  **TeraBackup Lite**, click **Backup** (như hình minh họa) để TeraBackup Lite sao lưu các dữ liệu nằm trong Backup Set. Thông tin về Dung lượng sao lưu, Tốc độ sao lưu,… được thể hiện trong hộp thoại **Thực hiện Backup.**  
   
     <div class="img-responsive center" markdown="1">
@@ -20,8 +32,11 @@ TeraBackup Lite hỗ trợ sao lưu tự động theo lịch (Schedule) và theo
     Vì TeraBackup Lite sao lưu theo cơ chế Incremental nên nếu thao tác sao lưu bị dừng lại giữa chừng (do tắt máy, rớt mạng,…) cũng không ảnh hưởng đến tính toàn vẹn của dữ liệu. Ở lần sao lưu tiếp theo, TeraBackup Lite chỉ sao lưu những file/folder chưa được sao lưu ở lần trước đó chứ không sao lưu lại từ đầu.
      
 ####Phục hồi
-Để phục hồi dữ liệu, bạn thực hiện như sau: 
-
+Để phục hồi dữ liệu, bạn thực hiện như sau bằng hình ảnh hoặc bằng video hướng dẫn:
+Video:
+<div class="mid">
+<iframe width="500" height="375" src="//www.youtube.com/embed/ZXBhgrhJEP8" frameborder="0" allowfullscreen></iframe>
+</div>
 1. Từ giao diện **TeraBackup Lite**, click **Restore** (như hình minh họa). Hộp thoại **Restore** xuất hiện, cho phép bạn chọn dữ liệu cần phục hồi và thực hiện một số tùy chọn khác.
 
     <div class="img-responsive center" markdown="1">

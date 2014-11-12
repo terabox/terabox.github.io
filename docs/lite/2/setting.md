@@ -6,7 +6,19 @@ tag: lite_settings
 doc_title: Thay đổi cấu hình Backup
 ---
 
-Cấu hình Backup cung cấp một số thiết lập được TeraBackup Lite sử dụng trong quá trình sao lưu và phục hồi dữ liệu. Bạn thay đổi Cấu hình Backup theo các bước sau: 
+Cấu hình Backup cung cấp một số thiết lập được TeraBackup Lite sử dụng trong quá trình sao lưu và phục hồi dữ liệu. Bạn thay đổi Cấu hình Backup theo các bước sau bằng hình ảnh hoặc bằng video hướng dẫn:
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/eAtydlppXxo" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Từ giao diện **TeraBackup Lite**, truy cập Cấu hình Backup bằng cách click vào biểu tượng  ![Cài đặt TeraBackup Pro]({{site.url}}/img/terabackup-lite/20-1.png). 
 2. Hộp thoại **Cấu hình Backup** xuất hiện.  

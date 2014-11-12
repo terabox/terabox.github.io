@@ -6,7 +6,19 @@ tag: pro_backup_restore
 doc_title: Sao lưu & Khôi phục dữ liệu
 ---
 ####Backup  
-TeraBackup Pro hỗ trợ sao lưu tự động theo lịch (Schedule) và theo thời gian thực (Continuous Data Protection(CDP)) nên hầu như bạn không cần thực hiện sao lưu thủ công. Nếu muốn sao lưu thủ công, bạn thực hiện như sau: 
+TeraBackup Pro hỗ trợ sao lưu tự động theo lịch (Schedule) và theo thời gian thực (Continuous Data Protection(CDP)) nên hầu như bạn không cần thực hiện sao lưu thủ công. Nếu muốn sao lưu thủ công, bạn thực hiện như sau bằng hình ảnh hoặc bằng video hướng dẫn: 
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/Mr8ob2FReOM" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Từ giao diện **TeraBackup Pro**, click **Backup** (như hình minh họa). Hộp thoại Tùy chọn Backup mở ra yêu cầu người dùng lựa chọn Backup Set. Nhấn vào biểu tượng để chọn backup set cần sao lưu. 
 
@@ -25,7 +37,19 @@ TeraBackup Pro hỗ trợ sao lưu tự động theo lịch (Schedule) và theo 
     Vì TeraBackup Pro sao lưu theo cơ chế Incremental nên nếu thao tác sao lưu bị dừng lại giữa chừng (do tắt máy, rớt mạng,…) cũng không ảnh hưởng đến tính toàn vẹn của dữ liệu. Ở lần sao lưu tiếp theo, TeraBackup Pro chỉ sao lưu những file/folder chưa được sao lưu ở lần trước đó chứ không sao lưu lại từ đầu.  
 
 ####Restore  
-Để phục hồi dữ liệu, bạn thực hiện như sau:  
+Để phục hồi dữ liệu, bạn thực hiện như sau bằng hình ảnh hoặc bằng video hướng dẫn.
+
+Video:
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/OPxQb4gidOk" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
 
 1. Từ giao diện TeraBackup Pro, click Restore (như hình minh họa). Hộp thoại Restore xuất hiện, cho phép bạn chọn backup set cần restore.  
 

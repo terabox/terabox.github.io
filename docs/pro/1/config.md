@@ -5,10 +5,22 @@ permalink: /docs/terabackup-pro/cau-hinh-terabackup-pro/
 tag: pro_config
 doc_title: Cấu hình TeraBackup Pro
 ---
+Sau khi cài đặt TeraBackup Pro, bạn cần thực hiện một số bước cấu hình sau bằng hình ảnh hoặc có thể xem hướng dẫn bằng video để có thể sử dụng:
 
-Sau khi cài đặt TeraBackup Pro, bạn cần thực hiện một số bước cấu hình sau để có thể sử dụng: 
+Video:
 
-1. Click vào biểu tượng **TeraBackup Pro** trên màn hình Desktop hoặc trong Start Menu để chạy  TeraBackup Pro.  
+
+<div class="row">
+<div class="col-md-2"></div>
+<div class="col-md-8">
+<div class="embed-responsive embed-responsive-16by9">
+<iframe width="500" height="375" src="//www.youtube.com/embed/Yl8JeS01Gew" frameborder="0" allowfullscreen></iframe>
+</div>
+</div>
+<div class="col-md-2"></div>
+</div>
+
+1. Click vào biểu tượng **TeraBackup Pro** trên màn hình Desktop hoặc trong Start Menu để chạy  TeraBackup Pro.    
 2. Hộp thoại **Đăng ký thử nghiệm** xuất hiện. Trong mục **Backup Server**, bạn có thể chọn https thay cho http nhằm tăng tính bảo mật cho dữ liệu (Tham khảo Phụ lục – **Bảo mật dữ liệu**). Click Tiếp để tiếp tục.
     
     <div class="img-responsive center" markdown="1">
