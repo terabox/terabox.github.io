@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bea4076-e6e2-4dbc-a435-a3b66c66d496" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/contact.html" afterPath="$PROJECT_DIR$/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sla.html" afterPath="$PROJECT_DIR$/sla.html" />
     </list>
     <ignored path="terabox.iws" />
     <ignored path=".idea/workspace.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,93 +26,68 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_config.yml" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="378">
+            <state vertical-scroll-proportion="0.0" vertical-offset="105" max-vertical-offset="315">
               <caret line="7" column="29" selection-start-line="7" selection-start-column="29" selection-end-line="7" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.66764706" vertical-offset="1735" max-vertical-offset="2286">
+            <state vertical-scroll-proportion="-12.166667" vertical-offset="1343" max-vertical-offset="1905">
               <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="faq.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="sla.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sla.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.6226415" vertical-offset="144" max-vertical-offset="4350">
+              <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="faq.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/faq.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1789" max-vertical-offset="2340">
+            <state vertical-scroll-proportion="0.0" vertical-offset="1845" max-vertical-offset="1950">
               <caret line="123" column="10" selection-start-line="123" selection-start-column="10" selection-end-line="123" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="installation.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="installation.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/pro/1/installation.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1296">
+            <state vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1080">
               <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="schedule.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/lite/2/schedule.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="630">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="setting.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/lite/2/setting.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="990">
+            <state vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="825">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="aes.md" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="aes.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/lite/3/aes.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="324">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/lite/index.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="270">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -121,26 +96,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="video_intro.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/lite/4/video_intro.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="index.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/lite/index.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="432">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="225">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ssl.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/lite/3/ssl.md">
-          <provider editor-type-id="MarkdownPreviewEditor">
-            <state />
-          </provider>
+      <file leaf-file-name="video_intro.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/lite/4/video_intro.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="396">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ssl.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/docs/lite/3/ssl.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="330">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
@@ -158,67 +137,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="changedFiles">
+    <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/blog/index.html" />
-        <option value="$PROJECT_DIR$/_posts/2014-09-24-mat-du-lieu-1-phut-mat-su-nghiep-ca-doi.markdown" />
-        <option value="$PROJECT_DIR$/docs/index.md" />
-        <option value="$PROJECT_DIR$/docs/lite/intro.md" />
-        <option value="$PROJECT_DIR$/_includes/doc_nav.html" />
-        <option value="$PROJECT_DIR$/notes.txt" />
-        <option value="$PROJECT_DIR$/docs/lite/3/security.md" />
-        <option value="$PROJECT_DIR$/docs/lite/installation.md" />
-        <option value="$PROJECT_DIR$/_layouts/docs.html" />
-        <option value="$PROJECT_DIR$/_includes/doc_nav_pro.html" />
-        <option value="$PROJECT_DIR$/docs/lite/3/aes.md" />
-        <option value="$PROJECT_DIR$/docs/lite/3/cdp.md" />
-        <option value="$PROJECT_DIR$/docs/lite/3/filter.md" />
-        <option value="$PROJECT_DIR$/docs/lite/3/ssl.md" />
-        <option value="$PROJECT_DIR$/docs/lite/overview.md" />
-        <option value="$PROJECT_DIR$/docs/pro/3/aes.md" />
-        <option value="$PROJECT_DIR$/docs/pro/3/filter.md" />
-        <option value="$PROJECT_DIR$/docs/pro/3/cdp.md" />
-        <option value="$PROJECT_DIR$/docs/pro/3/seed_loading.md" />
-        <option value="$PROJECT_DIR$/_site/sitemap.xml" />
-        <option value="$PROJECT_DIR$/docs/pro/3/infile_delta.md" />
-        <option value="$PROJECT_DIR$/docs/pro/3/ssl.md" />
-        <option value="$PROJECT_DIR$/_data/docs_pro.yml" />
-        <option value="$PROJECT_DIR$/docs/pro/index.md" />
-        <option value="$PROJECT_DIR$/docs/pro/system_requirements.md" />
-        <option value="$PROJECT_DIR$/docs/lite/index.md" />
-        <option value="$PROJECT_DIR$/docs/lite/system_requirements.md" />
-        <option value="$PROJECT_DIR$/_data/docs_lite.yml" />
-        <option value="$PROJECT_DIR$/_layouts/doc_lite.html" />
-        <option value="$PROJECT_DIR$/_layouts/doc_pro.html" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/download.html" />
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
-        <option value="$PROJECT_DIR$/_includes/header.html" />
-        <option value="$PROJECT_DIR$/_includes/menu.html" />
-        <option value="$PROJECT_DIR$/payment.html" />
-        <option value="$PROJECT_DIR$/docs/pro/1/installation.md" />
-        <option value="$PROJECT_DIR$/docs/pro/1/config.md" />
-        <option value="$PROJECT_DIR$/docs/pro/2/backup.md" />
-        <option value="$PROJECT_DIR$/docs/pro/2/config.md" />
-        <option value="$PROJECT_DIR$/docs/pro/2/setting.md" />
-        <option value="$PROJECT_DIR$/docs/lite/1/config.md" />
-        <option value="$PROJECT_DIR$/docs/lite/1/setup.md" />
-        <option value="$PROJECT_DIR$/docs/lite/2/backup.md" />
-        <option value="$PROJECT_DIR$/docs/lite/2/backupset.md" />
-        <option value="$PROJECT_DIR$/docs/lite/2/config.md" />
-        <option value="$PROJECT_DIR$/docs/lite/2/schedule.md" />
-        <option value="$PROJECT_DIR$/docs/lite/2/setting.md" />
-        <option value="$PROJECT_DIR$/faq.html" />
-        <option value="$PROJECT_DIR$/_config.yml" />
-        <option value="$PROJECT_DIR$/contact.html" />
+        <option value="$PROJECT_DIR$/sla.html" />
       </list>
     </option>
   </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1431" />
-    <option name="y" value="24" />
-    <option name="width" value="1301" />
-    <option name="height" value="744" />
+    <option name="y" value="22" />
+    <option name="width" value="1280" />
+    <option name="height" value="720" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -246,6 +177,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -260,27 +192,12 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="terabox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="terabox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="terabox" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="_assets" />
+              <option name="myItemId" value="terabox.github.io" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -288,7 +205,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../cloudbpm" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
     <property name="FullScreen" value="false" />
@@ -400,274 +317,396 @@
     <task active="true" id="Default" summary="Default task">
       <changelist id="2bea4076-e6e2-4dbc-a435-a3b66c66d496" name="Default" comment="" />
       <created>1411529538326</created>
+      <option name="number" value="Default" />
       <updated>1411529538326</updated>
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1411545758477</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
       <updated>1411545758477</updated>
     </task>
     <task id="LOCAL-00002" summary="update">
       <created>1411545768692</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
       <updated>1411545768692</updated>
     </task>
     <task id="LOCAL-00003" summary="update">
       <created>1411546895488</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
       <updated>1411546895488</updated>
     </task>
     <task id="LOCAL-00004" summary="update">
       <created>1411547707632</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
       <updated>1411547707632</updated>
     </task>
     <task id="LOCAL-00005" summary="update">
       <created>1411547742662</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
       <updated>1411547742663</updated>
     </task>
     <task id="LOCAL-00006" summary="update">
       <created>1411608527078</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
       <updated>1411608527078</updated>
     </task>
     <task id="LOCAL-00007" summary="update">
       <created>1411622459688</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
       <updated>1411622459688</updated>
     </task>
     <task id="LOCAL-00008" summary="update">
       <created>1411624060569</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
       <updated>1411624060569</updated>
     </task>
     <task id="LOCAL-00009" summary="update">
       <created>1411642226378</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
       <updated>1411642226379</updated>
     </task>
     <task id="LOCAL-00010" summary="update">
       <created>1411727682088</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
       <updated>1411727682088</updated>
     </task>
     <task id="LOCAL-00011" summary="update">
       <created>1411731421250</created>
+      <option name="number" value="00011" />
+      <option name="project" value="LOCAL" />
       <updated>1411731421250</updated>
     </task>
     <task id="LOCAL-00012" summary="update">
       <created>1412154427079</created>
+      <option name="number" value="00012" />
+      <option name="project" value="LOCAL" />
       <updated>1412154427079</updated>
     </task>
     <task id="LOCAL-00013" summary="update">
       <created>1412305765569</created>
+      <option name="number" value="00013" />
+      <option name="project" value="LOCAL" />
       <updated>1412305765569</updated>
     </task>
     <task id="LOCAL-00014" summary="update">
       <created>1412309661335</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
       <updated>1412309661335</updated>
     </task>
     <task id="LOCAL-00015" summary="update">
       <created>1412332609469</created>
+      <option name="number" value="00015" />
+      <option name="project" value="LOCAL" />
       <updated>1412332609469</updated>
     </task>
     <task id="LOCAL-00016" summary="update">
       <created>1412332622236</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
       <updated>1412332622236</updated>
     </task>
     <task id="LOCAL-00017" summary="update">
       <created>1412332857682</created>
+      <option name="number" value="00017" />
+      <option name="project" value="LOCAL" />
       <updated>1412332857682</updated>
     </task>
     <task id="LOCAL-00018" summary="update">
       <created>1412440401705</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
       <updated>1412440401705</updated>
     </task>
     <task id="LOCAL-00019" summary="update">
       <created>1412440408899</created>
+      <option name="number" value="00019" />
+      <option name="project" value="LOCAL" />
       <updated>1412440408899</updated>
     </task>
     <task id="LOCAL-00020" summary="update">
       <created>1412440710739</created>
+      <option name="number" value="00020" />
+      <option name="project" value="LOCAL" />
       <updated>1412440710739</updated>
     </task>
     <task id="LOCAL-00021" summary="update">
       <created>1412477290056</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
       <updated>1412477290056</updated>
     </task>
     <task id="LOCAL-00022" summary="update">
       <created>1412477544321</created>
+      <option name="number" value="00022" />
+      <option name="project" value="LOCAL" />
       <updated>1412477544321</updated>
     </task>
     <task id="LOCAL-00023" summary="update">
       <created>1412506364783</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
       <updated>1412506364783</updated>
     </task>
     <task id="LOCAL-00024" summary="update">
       <created>1412510419391</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
       <updated>1412510419391</updated>
     </task>
     <task id="LOCAL-00025" summary="update">
       <created>1412510967302</created>
+      <option name="number" value="00025" />
+      <option name="project" value="LOCAL" />
       <updated>1412510967302</updated>
     </task>
     <task id="LOCAL-00026" summary="update">
       <created>1412577933335</created>
+      <option name="number" value="00026" />
+      <option name="project" value="LOCAL" />
       <updated>1412577933335</updated>
     </task>
     <task id="LOCAL-00027" summary="update">
       <created>1412578343133</created>
+      <option name="number" value="00027" />
+      <option name="project" value="LOCAL" />
       <updated>1412578343133</updated>
     </task>
     <task id="LOCAL-00028" summary="update">
       <created>1412586704566</created>
+      <option name="number" value="00028" />
+      <option name="project" value="LOCAL" />
       <updated>1412586704566</updated>
     </task>
     <task id="LOCAL-00029" summary="update">
       <created>1412587435576</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
       <updated>1412587435576</updated>
     </task>
     <task id="LOCAL-00030" summary="update">
       <created>1412588231701</created>
+      <option name="number" value="00030" />
+      <option name="project" value="LOCAL" />
       <updated>1412588231701</updated>
     </task>
     <task id="LOCAL-00031" summary="update">
       <created>1412652869237</created>
+      <option name="number" value="00031" />
+      <option name="project" value="LOCAL" />
       <updated>1412652869237</updated>
     </task>
     <task id="LOCAL-00032" summary="update">
       <created>1412669874455</created>
+      <option name="number" value="00032" />
+      <option name="project" value="LOCAL" />
       <updated>1412669874455</updated>
     </task>
     <task id="LOCAL-00033" summary="update">
       <created>1412674584334</created>
+      <option name="number" value="00033" />
+      <option name="project" value="LOCAL" />
       <updated>1412674584334</updated>
     </task>
     <task id="LOCAL-00034" summary="update">
       <created>1412674810263</created>
+      <option name="number" value="00034" />
+      <option name="project" value="LOCAL" />
       <updated>1412674810263</updated>
     </task>
     <task id="LOCAL-00035" summary="update">
       <created>1412725562369</created>
+      <option name="number" value="00035" />
+      <option name="project" value="LOCAL" />
       <updated>1412725562369</updated>
     </task>
     <task id="LOCAL-00036" summary="update">
       <created>1412725812102</created>
+      <option name="number" value="00036" />
+      <option name="project" value="LOCAL" />
       <updated>1412725812102</updated>
     </task>
     <task id="LOCAL-00037" summary="update">
       <created>1412729331578</created>
+      <option name="number" value="00037" />
+      <option name="project" value="LOCAL" />
       <updated>1412729331578</updated>
     </task>
     <task id="LOCAL-00038" summary="update">
       <created>1412729536258</created>
+      <option name="number" value="00038" />
+      <option name="project" value="LOCAL" />
       <updated>1412729536258</updated>
     </task>
     <task id="LOCAL-00039" summary="update">
       <created>1412730176274</created>
+      <option name="number" value="00039" />
+      <option name="project" value="LOCAL" />
       <updated>1412730176274</updated>
     </task>
     <task id="LOCAL-00040" summary="update">
       <created>1412830753576</created>
+      <option name="number" value="00040" />
+      <option name="project" value="LOCAL" />
       <updated>1412830753577</updated>
     </task>
     <task id="LOCAL-00041" summary="update">
       <created>1412835510742</created>
+      <option name="number" value="00041" />
+      <option name="project" value="LOCAL" />
       <updated>1412835510742</updated>
     </task>
     <task id="LOCAL-00042" summary="update">
       <created>1412835903556</created>
+      <option name="number" value="00042" />
+      <option name="project" value="LOCAL" />
       <updated>1412835903556</updated>
     </task>
     <task id="LOCAL-00043" summary="update">
       <created>1412870748616</created>
+      <option name="number" value="00043" />
+      <option name="project" value="LOCAL" />
       <updated>1412870748616</updated>
     </task>
     <task id="LOCAL-00044" summary="update">
       <created>1413102445155</created>
+      <option name="number" value="00044" />
+      <option name="project" value="LOCAL" />
       <updated>1413102445155</updated>
     </task>
     <task id="LOCAL-00045" summary="update">
       <created>1413102689503</created>
+      <option name="number" value="00045" />
+      <option name="project" value="LOCAL" />
       <updated>1413102689503</updated>
     </task>
     <task id="LOCAL-00046" summary="update">
       <created>1413102928761</created>
+      <option name="number" value="00046" />
+      <option name="project" value="LOCAL" />
       <updated>1413102928761</updated>
     </task>
     <task id="LOCAL-00047" summary="update">
       <created>1413182534592</created>
+      <option name="number" value="00047" />
+      <option name="project" value="LOCAL" />
       <updated>1413182534592</updated>
     </task>
     <task id="LOCAL-00048" summary="update">
       <created>1413195138019</created>
+      <option name="number" value="00048" />
+      <option name="project" value="LOCAL" />
       <updated>1413195138019</updated>
     </task>
     <task id="LOCAL-00049" summary="update">
       <created>1413252511823</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
       <updated>1413252511823</updated>
     </task>
     <task id="LOCAL-00050" summary="update">
       <created>1413253309155</created>
+      <option name="number" value="00050" />
+      <option name="project" value="LOCAL" />
       <updated>1413253309155</updated>
     </task>
     <task id="LOCAL-00051" summary="update">
       <created>1413253449597</created>
+      <option name="number" value="00051" />
+      <option name="project" value="LOCAL" />
       <updated>1413253449597</updated>
     </task>
     <task id="LOCAL-00052" summary="update">
       <created>1413253692608</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
       <updated>1413253692608</updated>
     </task>
     <task id="LOCAL-00053" summary="update">
       <created>1413275975067</created>
+      <option name="number" value="00053" />
+      <option name="project" value="LOCAL" />
       <updated>1413275975067</updated>
     </task>
     <task id="LOCAL-00054" summary="update">
       <created>1413638339180</created>
+      <option name="number" value="00054" />
+      <option name="project" value="LOCAL" />
       <updated>1413638339180</updated>
     </task>
     <task id="LOCAL-00055" summary="update">
       <created>1413774434661</created>
+      <option name="number" value="00055" />
+      <option name="project" value="LOCAL" />
       <updated>1413774434661</updated>
     </task>
     <task id="LOCAL-00056" summary="add pdf">
       <created>1414858048509</created>
+      <option name="number" value="00056" />
+      <option name="project" value="LOCAL" />
       <updated>1414858048509</updated>
     </task>
     <task id="LOCAL-00057" summary="add pdf">
       <created>1415601909144</created>
+      <option name="number" value="00057" />
+      <option name="project" value="LOCAL" />
       <updated>1415601909144</updated>
     </task>
     <task id="LOCAL-00058" summary="update video">
       <created>1415789927167</created>
+      <option name="number" value="00058" />
+      <option name="project" value="LOCAL" />
       <updated>1415789927168</updated>
     </task>
     <task id="LOCAL-00059" summary="update video">
       <created>1415872032142</created>
+      <option name="number" value="00059" />
+      <option name="project" value="LOCAL" />
       <updated>1415872032142</updated>
     </task>
     <task id="LOCAL-00060" summary="update video">
       <created>1415872544514</created>
+      <option name="number" value="00060" />
+      <option name="project" value="LOCAL" />
       <updated>1415872544514</updated>
     </task>
     <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1431" y="24" width="1301" height="744" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="22" width="1280" height="720" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32662538" sideWeight="0.4996016" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22629482" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32535884" sideWeight="0.4996016" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22940226" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45356038" sideWeight="0.5003984" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.4996016" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47368422" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.4996016" order="11" side_tool="false" content_ui="tabs" />
@@ -713,12 +752,10 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
+    <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/docs/lite/2/backupset.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="774">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
@@ -726,9 +763,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_posts/2014-09-24-mat-du-lieu-1-phut-mat-su-nghiep-ca-doi.markdown">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.125" vertical-offset="4" max-vertical-offset="576">
           <caret line="2" column="52" selection-start-line="2" selection-start-column="52" selection-end-line="2" selection-end-column="52" />
@@ -759,13 +793,6 @@
     <entry file="file://$PROJECT_DIR$/img/terabackup-lite/4.png">
       <provider selected="true" editor-type-id="images">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/_site/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4633" max-vertical-offset="5364">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_data/docs_pro.yml">
@@ -889,9 +916,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/1/config.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.448276" vertical-offset="0" max-vertical-offset="1944">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="20" selection-end-column="6" />
@@ -899,9 +923,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/2/backup.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.4827585" vertical-offset="387" max-vertical-offset="1584">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
@@ -909,9 +930,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/2/config.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.137931" vertical-offset="27" max-vertical-offset="954">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="6" />
@@ -919,9 +937,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/3/aes.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -929,9 +944,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/3/cdp.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -939,9 +951,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/3/filter.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -949,9 +958,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/3/infile_delta.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -959,9 +965,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/3/ssl.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -969,9 +972,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/system_requirements.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="576">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -979,9 +979,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -989,9 +986,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/2/setting.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.6896553" vertical-offset="51" max-vertical-offset="3888">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="20" selection-end-column="6" />
@@ -999,9 +993,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/1/config.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="19.551723" vertical-offset="783" max-vertical-offset="1332">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="20" selection-end-column="6" />
@@ -1009,9 +1000,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/1/setup.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.827586" vertical-offset="0" max-vertical-offset="1278">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
@@ -1019,9 +1007,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/2/backup.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.448276" vertical-offset="0" max-vertical-offset="1314">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="20" selection-end-column="6" />
@@ -1029,9 +1014,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/2/backupset.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="162" max-vertical-offset="774">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="22" selection-end-column="6" />
@@ -1039,9 +1021,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/2/config.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="234" max-vertical-offset="882">
           <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="21" selection-end-column="6" />
@@ -1049,9 +1028,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/2/schedule.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="198" max-vertical-offset="630">
           <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="19" selection-end-column="6" />
@@ -1060,9 +1036,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/2/setting.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="990">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -1071,9 +1044,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/3/aes.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1082,9 +1052,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/index.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1093,9 +1060,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/4/video_intro.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="549">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1104,9 +1068,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/lite/3/ssl.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="396">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
@@ -1115,9 +1076,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/pro/1/installation.md">
-      <provider editor-type-id="MarkdownPreviewEditor">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="1296">
           <caret line="29" column="66" selection-start-line="29" selection-start-column="66" selection-end-line="29" selection-end-column="66" />
@@ -1143,12 +1101,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66764706" vertical-offset="1735" max-vertical-offset="2286">
+        <state vertical-scroll-proportion="-12.166667" vertical-offset="1343" max-vertical-offset="1905">
           <caret line="109" column="49" selection-start-line="109" selection-start-column="49" selection-end-line="109" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sla.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6226415" vertical-offset="144" max-vertical-offset="4350">
+          <caret line="25" column="23" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
-
