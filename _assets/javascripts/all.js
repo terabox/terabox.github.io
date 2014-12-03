@@ -4,6 +4,7 @@
 //= require vendor/jquery.appear
 //= require vendor/jquery.cookie
 //= require vendor/bootstrap
+//= require vendor/owl-carousel/owl.carousel
 //= require plugins
 //= require views/view.home
 //= require theme

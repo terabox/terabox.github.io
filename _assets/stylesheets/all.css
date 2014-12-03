@@ -1,6 +1,9 @@
 /*
  *= require bootstrap
  *= require font-awesome
+ *= require vendor/owl-carousel/owl.carousel
+ *= require vendor/owl-carousel/owl.theme
+ *= require font-awesome
  *= require theme
  *= require theme-elements
  *= require theme-animate
