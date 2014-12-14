@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2bea4076-e6e2-4dbc-a435-a3b66c66d496" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/deploy.rb" afterPath="$PROJECT_DIR$/config/deploy.rb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_includes/footer.html" afterPath="$PROJECT_DIR$/_includes/footer.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="terabox.iws" />
@@ -29,21 +28,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="_config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
+            <state vertical-scroll-proportion="0.070754714" vertical-offset="0" max-vertical-offset="424">
               <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.51741296" vertical-offset="3122" max-vertical-offset="4065">
-              <caret line="246" column="9" selection-start-line="246" selection-start-column="9" selection-end-line="246" selection-end-column="9" />
+            <state vertical-scroll-proportion="-4.2916665" vertical-offset="3302" max-vertical-offset="4065">
+              <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
               <folding>
                 <element signature="n#div#0;n#!!top" expanded="false" />
                 <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -119,9 +118,11 @@
       <file leaf-file-name="footer.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/_includes/footer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="1350">
-              <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-              <folding />
+            <state vertical-scroll-proportion="-21.875" vertical-offset="960" max-vertical-offset="1575">
+              <caret line="99" column="154" selection-start-line="99" selection-start-column="154" selection-end-line="99" selection-end-column="154" />
+              <folding>
+                <element signature="n#style#0;n#img#0;n#noscript#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -163,10 +164,10 @@
         <option value="$PROJECT_DIR$/_assets/javascripts/all.js" />
         <option value="$PROJECT_DIR$/_assets/stylesheets/all.css" />
         <option value="$PROJECT_DIR$/newsletters/news01.html" />
-        <option value="$PROJECT_DIR$/_includes/footer.html" />
         <option value="$PROJECT_DIR$/_config.yml" />
         <option value="$PROJECT_DIR$/config/deploy.rb" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/_includes/footer.html" />
       </list>
     </option>
   </component>
@@ -176,7 +177,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="777" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -220,6 +221,34 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="terabox.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terabox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terabox.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_layouts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terabox" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="terabox.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="_includes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -354,114 +383,6 @@
       <created>1411529538326</created>
       <option name="number" value="Default" />
       <updated>1411529538326</updated>
-    </task>
-    <task id="LOCAL-00001" summary="update">
-      <created>1411545758477</created>
-      <option name="number" value="00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1411545758477</updated>
-    </task>
-    <task id="LOCAL-00002" summary="update">
-      <created>1411545768692</created>
-      <option name="number" value="00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1411545768692</updated>
-    </task>
-    <task id="LOCAL-00003" summary="update">
-      <created>1411546895488</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1411546895488</updated>
-    </task>
-    <task id="LOCAL-00004" summary="update">
-      <created>1411547707632</created>
-      <option name="number" value="00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1411547707632</updated>
-    </task>
-    <task id="LOCAL-00005" summary="update">
-      <created>1411547742662</created>
-      <option name="number" value="00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1411547742663</updated>
-    </task>
-    <task id="LOCAL-00006" summary="update">
-      <created>1411608527078</created>
-      <option name="number" value="00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1411608527078</updated>
-    </task>
-    <task id="LOCAL-00007" summary="update">
-      <created>1411622459688</created>
-      <option name="number" value="00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1411622459688</updated>
-    </task>
-    <task id="LOCAL-00008" summary="update">
-      <created>1411624060569</created>
-      <option name="number" value="00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1411624060569</updated>
-    </task>
-    <task id="LOCAL-00009" summary="update">
-      <created>1411642226378</created>
-      <option name="number" value="00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1411642226379</updated>
-    </task>
-    <task id="LOCAL-00010" summary="update">
-      <created>1411727682088</created>
-      <option name="number" value="00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1411727682088</updated>
-    </task>
-    <task id="LOCAL-00011" summary="update">
-      <created>1411731421250</created>
-      <option name="number" value="00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1411731421250</updated>
-    </task>
-    <task id="LOCAL-00012" summary="update">
-      <created>1412154427079</created>
-      <option name="number" value="00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1412154427079</updated>
-    </task>
-    <task id="LOCAL-00013" summary="update">
-      <created>1412305765569</created>
-      <option name="number" value="00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1412305765569</updated>
-    </task>
-    <task id="LOCAL-00014" summary="update">
-      <created>1412309661335</created>
-      <option name="number" value="00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1412309661335</updated>
-    </task>
-    <task id="LOCAL-00015" summary="update">
-      <created>1412332609469</created>
-      <option name="number" value="00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1412332609469</updated>
-    </task>
-    <task id="LOCAL-00016" summary="update">
-      <created>1412332622236</created>
-      <option name="number" value="00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1412332622236</updated>
-    </task>
-    <task id="LOCAL-00017" summary="update">
-      <created>1412332857682</created>
-      <option name="number" value="00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1412332857682</updated>
-    </task>
-    <task id="LOCAL-00018" summary="update">
-      <created>1412440401705</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1412440401705</updated>
     </task>
     <task id="LOCAL-00019" summary="update">
       <created>1412440408899</created>
@@ -751,22 +672,28 @@
       <option name="project" value="LOCAL" />
       <updated>1418286152369</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update">
+      <created>1418289086620</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1418289086620</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="777" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="773" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31725147" sideWeight="0.4996016" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26332796" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31617647" sideWeight="0.4996016" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2673667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45356038" sideWeight="0.5003984" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.4996016" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28362572" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.28235295" sideWeight="0.4996016" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -1144,14 +1071,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="926" max-vertical-offset="1350">
-          <caret line="73" column="22" selection-start-line="73" selection-start-column="22" selection-end-line="73" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/newsletters/news01.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="9345">
@@ -1167,14 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="315">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/deploy.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="660">
@@ -1185,8 +1096,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51741296" vertical-offset="3122" max-vertical-offset="4065">
-          <caret line="246" column="9" selection-start-line="246" selection-start-column="9" selection-end-line="246" selection-end-column="9" />
+        <state vertical-scroll-proportion="-4.2916665" vertical-offset="3302" max-vertical-offset="4065">
+          <caret line="251" column="0" selection-start-line="251" selection-start-column="0" selection-end-line="251" selection-end-column="0" />
           <folding>
             <element signature="n#div#0;n#!!top" expanded="false" />
             <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
@@ -1201,6 +1112,24 @@
             <element signature="n#style#0;n#div#0;n#div#2;n#div#0;n#div#0;n#div#3;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#4;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_includes/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.875" vertical-offset="960" max-vertical-offset="1575">
+          <caret line="99" column="154" selection-start-line="99" selection-start-column="154" selection-end-line="99" selection-end-column="154" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#noscript#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.070754714" vertical-offset="0" max-vertical-offset="424">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
